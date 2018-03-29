@@ -1,0 +1,19 @@
+//front page search block
+.pane-search-api-page-default-search,
+.search-form-widget {
+    // background: url(../images/search-background.jpg) no-repeat center center;
+    //    background-size: cover;
+    input {
+        @include font-size(20);
+        border: none;
+    }
+    #edit-submit-2 {
+        border: none;
+        background: $secondary-color url(../images/search.png) no-repeat center center;
+        font-size: 0px;
+        transition: background 0.5s ease-in-out;
+        &:hover {
+            background: $primary-color url(../images/search.png) no-repeat center center;
+        }
+    }
+}

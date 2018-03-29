@@ -1,0 +1,245 @@
+/* There were issue compilng for some reason, until they are fixed this is here */
+.header__logo-image{
+	image-rendering: -webkit-optimize-contrast;
+}
+
+/* Working out events styles */
+
+body.page-node-2846 aside.sidebars,
+body.page-node-2861 aside.sidebars,
+body.page-node-2846 #block-webform-client-block-22,
+body.page-node-2861 #block-webform-client-block-22{
+  display: none;
+}
+body.page-node-2846 #page #main #content,
+body.page-node-2861 #page #main #content{
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    float: none;
+    left: auto;
+    right: auto;
+}
+/* Event View Form */
+.view-id-events .views-exposed-form{
+  width: 100%;
+}
+.view-id-events .views-exposed-form #edit-combine-wrapper label{
+  display: none;
+}
+.view-id-events .views-exposed-form #edit-combine-wrapper{
+  width: 50%;
+  padding-top: 8px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 26px;
+}
+@media (max-width: 950px) {
+  .view-id-events .views-exposed-form #edit-combine-wrapper{
+    width: 100%;
+  }
+  .view-id-events .views-exposed-form #edit-field-start-date-value-wrapper{
+    width: 70% !important;
+  }
+  .view-id-events .views-exposed-form .views-submit-button{
+    width: 30% !important;
+    min-width: 115px;
+  }
+}
+.view-id-events .views-exposed-form #edit-combine-wrapper input{    
+  width: 100%;
+  padding: 20px;
+  height: 60px;
+  box-shadow: 0px 0px 33px -7px #818285;
+  border: none;
+  background-color: #ffffff;
+  color: #002056;
+  font-weight: bold;
+}
+.view-id-events .views-exposed-form input#edit-combine::placeholder {
+    font-weight: normal;
+}
+
+
+
+
+
+.view-id-events .views-exposed-form #edit-field-start-date-value-wrapper{
+  width: 30%;
+  display: flex;
+}
+.view-id-events .views-exposed-form #edit-field-start-date-value-wrapper label{
+  display: inline-block;
+  width: 28%;
+  height: 60px;
+  line-height: 60px;
+}
+.view-id-events .views-exposed-form #edit-field-start-date-value-wrapper .views-widget{
+  display: inline-block;
+  width: 69%;
+  box-shadow: 0px 0px 33px -7px #818285;
+}
+
+.view-id-events .views-exposed-form #edit-field-start-date-value-wrapper .views-widget .form-item-field-start-date-value-value,
+.view-id-events .views-exposed-form #edit-field-start-date-value-wrapper .views-widget #edit-field-start-date-value-value{
+  width: 100%;
+}
+
+.view-id-events .views-exposed-form #edit-field-start-date-value-wrapper .views-widget #edit-field-start-date-value-value .form-item{
+  width: 50%;
+}
+
+
+
+.view-id-events .views-exposed-form #edit-field-start-date-value-wrapper .views-widget #edit-field-start-date-value-value .form-item select{
+  width: 100%;
+  padding: 20px;
+  height: 60px;
+  border: none;
+  background-color: #fff;
+  color: #002056;
+  margin-right: 0px;
+  width: auto;
+}
+
+.view-id-events .views-exposed-form .views-submit-button{
+  width: 20%;
+}
+.view-id-events .views-exposed-form .views-submit-button input{
+  height: 60px;
+  margin-top: 0;
+}
+
+.slick-track {
+      padding-bottom: 10px;
+}
+
+
+/* Event View Listing */
+
+
+.view-id-events .view-content{
+  border-top: 6px solid #143f88;
+  padding-top: 35px;
+  margin: 40px 0px;
+}
+
+.view-id-events .view-content .node,
+#page .view-id-events .view-content .views-row{
+  background-color: #F8F7F7;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+#page .view-id-events .view-content .views-row .views-field-field-start-date span,
+.view-id-events .view-content .node .field-name-field-start-date span{
+  display: inline-block;
+  background-color: #002056;
+  padding: 4px 20px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+#page .view-id-events .view-content .views-row .views-field-title h2,
+.view-id-events .view-content .node .field-name-title h2{
+  margin-top: 0;
+}
+
+#page .view-id-events .view-content .views-row .views-field-title h2 a,
+.view-id-events .view-content .node .field-name-title h2 a{
+  text-decoration: none;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+
+#page .view-id-events .view-content .views-row .views-field-field-fees div.field-content,
+#page .view-id-events .view-content .views-row .views-field-field-location div.field-content,
+#page .view-id-events .view-content .views-row .views-field-field-start-date-1 div{
+  display: inline;
+}
+
+#page .view-id-events .view-content .views-row .views-field-field-fees .views-label,
+#page .view-id-events .view-content .views-row .views-field-field-location .views-label,
+#page .view-id-events .view-content .views-row .views-field-field-start-date-1 .views-label {
+  font-weight: bold;
+}
+
+#page .view-id-events .view-content .views-row .views-field-field-location,
+#page .view-id-events .view-content .views-row .views-field-field-fees{
+  margin-bottom: 5px;
+}
+
+#content .view-id-events .views-field {
+    margin-bottom: 20px;
+}
+
+/* Event internal page */
+.node-type-event #block-views-banner-image-top-block .block__content{
+  max-height: 200px;
+  height: 200px;
+}
+
+@media (max-width: 950px) {
+  .node-type-event #block-views-banner-image-top-block .block__content{
+    max-height: 150px;
+    height: 150px !important;
+  }
+}
+
+body.node-type-event #main{
+  max-width: 830px;
+  margin: auto;
+}
+body.node-type-event #main #content .node-event{
+  margin-top: 30px;
+}
+body.node-type-event .breadcrumb-wrapper .breadcrumb{
+  max-width: 830px;
+  margin: auto;
+}
+body.node-type-event #main .field-name-field-start-date {
+  font-weight: bold;
+}
+body.node-type-event #main .field-label {
+  font-size: 1.5rem;
+  color: #6f6f6f;
+  margin-top: 30px;
+}
+
+/* Event view pager */
+.view-id-events .pager{
+  border-top: 3px solid #002056;
+  background-color: #ffffff;
+  padding-top: 40px;
+}
+.view-id-events .pager li.pager-current{
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #c6003c;
+  background: none;
+  border-bottom: 4px solid #c6003c;
+  padding-bottom: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin: 0px 8px;
+}
+.view-id-events .pager li.pager-item{
+  background: none;
+}
+.view-id-events .pager li.pager-item a{
+  color: #555;
+  text-decoration: none;
+  font-weight: normal;
+}
+.not-logged-in .vertical-tabs,
+.view-id-events .pager .pager-ellipsis,
+.view-id-events .pager .pager-next,
+.view-id-events .pager .pager-last,
+.view-id-events .pager .pager-previous,
+.view-id-events .pager .pager-first{
+  display: none; 
+}

@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Din';
+    src: url('../fonts/din_alternate_bold-webfont.woff2') format('woff2'),
+         url('../fonts/din_alternate_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/**
+ * Style file @
+ *
+ * This file is compiled into style.css
+ */
+
+/* ---------- Import variables ---------- */
+@import 'base/variables';
+
+/* ---------- Import grid system ---------- */
+@import 'jeet/index';
+
+/* ---------- Import base ---------- */
+@import 'base/mixins';
+@import 'base/breakpoint';
+@import 'base/breakpoint-slicer';
+//@import 'base/breakpoint-slicer-debug';
+/* ---------- Import reset of govcms styles ---------- */
+@import 'design/govcms_reset';
+@import 'base/typography';
+
+/* ---------- Import design ---------- */
+@import 'design/header';
+@import 'design/footer';
+@import 'design/homepage';
+@import 'design/design';
+@import 'design/layout';
+@import 'design/gallery';
+@import 'design/related-content';
+@import 'design/tabs';
+@import 'design/ckeditor';
+@import 'design/templates';
+@import 'design/events'; 
+@import 'design/print';
+@import 'design/resources';
+@import 'design/tables';
+@import 'design/views';
+
+/* ---------- Components ----------
+@import 'components/blockquote';
+@import 'components/blocks';
+@import 'components/breadcrumb';
+@import 'components/captions';
+@import 'components/ckeditor';
+@import 'components/login';
+@import 'components/maintenance';
+@import 'components/pagination';
+@import 'components/sitemap';
+@import 'components/search';
+@import 'components/slider';
+@import 'components/tables';
+@import 'components/tabs-primary';
+*/
+@import 'components/forms';
+@import 'components/buttons';

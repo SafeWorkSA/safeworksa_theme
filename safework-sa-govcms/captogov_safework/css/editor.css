@@ -1,0 +1,100 @@
+/*
+  CKEDITOR EDITOR CSS
+*/
+.cke_editable .accordion-row {
+  outline-style: dotted;
+  outline-color: orange;
+  margin: 35px 0 0;
+  margin-bottom: 10px;
+  outline-width: 1px;
+  padding: 10px;
+  position: relative;
+}
+.cke_editable .accordion-row:before {
+  content: 'Accordion row';
+  line-height: 20px;
+  padding: 5px;
+  position: absolute;
+  background: orange;
+  color: #fff;
+  top: -30px;
+  left: 0;
+}
+.cke_editable .accordion-button {
+  outline-style: dotted;
+  outline-color: blue;
+  margin: 35px 0 20px;
+  margin-bottom: 10px;
+  outline-width: 1px;
+  padding: 10px;
+  position: relative;
+}
+.cke_editable .accordion-button:before {
+  content: 'Accordion button';
+  line-height: 20px;
+  padding: 5px;
+  position: absolute;
+  background: blue;
+  color: #fff;
+  top: -30px;
+  left: 0;
+}
+.cke_editable .accordion-content {
+  outline-style: dashed;
+  outline-color: green;
+  margin: 35px 0 0px;
+  outline-width: 1px;
+  padding: 10px;
+  position: relative;
+}
+.cke_editable .accordion-content:before {
+  content: 'Accordion contents';
+  line-height: 20px;
+  padding: 5px;
+  position: absolute;
+  background: green;
+  color: #fff;
+  top: -30px;
+  left: 0;
+}
+
+.cke_editable .button {
+  background: blue;
+  color: white;
+  padding: 10px 15px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+/*
+  Left/Right Float
+*/
+.cke_editable img.align-left {
+  float: left;
+}
+.cke_editable img.align-right {
+  float: right;
+}
+
+/*
+  Callout box
+*/
+.cke_editable .callout-box {
+  outline-style: dashed;
+  outline-color: green;
+  margin: 35px 0 0px;
+  outline-width: 1px;
+  padding: 10px;
+  position: relative;
+}
+.cke_editable .callout-box:before {
+  content: 'Callout box';
+  line-height: 20px;
+  padding: 5px;
+  position: absolute;
+  background: green;
+  color: #fff;
+  top: -30px;
+  left: 0;
+}

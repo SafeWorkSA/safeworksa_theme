@@ -1,0 +1,382 @@
+//footer
+footer {
+    z-index: 0;
+    padding-top: 80px;
+
+    // set the background
+    background: #64b3e4;
+    @include from(tablet-l) {
+        background: transparent url(../images/footer-bg.png) no-repeat top center;
+        height: 1085px;
+    }
+
+    #block-block-14 {
+        width: 100%;
+        // background-color: $light-blue-bg;
+        margin-bottom: 60px;
+        @include from(tablet-l) {
+            margin-bottom: 100px;
+        }
+
+        .block__content{
+
+            ul, ul li {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            ul {
+                text-align: center;
+
+                > li {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 0 7px;
+                    @include font-size(20);
+                    color: #fff;
+
+                    &:first-child {
+                        @include to(tablet-p) {
+                            margin-bottom: 15px;
+                            display: block;
+                        }
+                    }
+
+                    > a {
+                        background: transparent url(../images/icon-sm-bg.png) no-repeat 0 0;
+                        width: 32px;
+                        height: 55px;
+                        display: block;
+                        // text-indent: -9001px;
+                        display: block;
+
+                        &:after {
+                            content: '';
+                            width: inherit;
+                            height: inherit;
+                            background: transparent url(../images/icon-sm-facebook.png) no-repeat center center;
+                            display: block;
+                        }
+
+                        &.facebook:after {
+                            background-image: url(../images/icon-sm-facebook.png);
+                        }
+                        &.twitter:after {
+                            background-image: url(../images/icon-sm-twitter.png);
+                        }
+                        &.youtube:after {
+                            background-image: url(../images/icon-sm-youtube.png);
+                        }
+                        &.linkedin:after {
+                            background-image: url(../images/icon-sm-linkedin.png);
+                        }
+                        &.rss:after {
+                            background-image: url(../images/icon-sm-rss.png);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ul.menu {
+        margin: 0;
+    }
+    #block-menu-block-2 {
+        // background-color: $light-blue-bg;
+        .menu-block-2 {
+            @extend .clearfix;
+            max-width: 1120px;
+            margin: auto;
+            text-align:center;
+            .menu {
+              display: inline;
+            }
+            & > .menu > li {
+              display: inline-block;
+                // @include column(1/2, $gutter: 5, $cycle: 2);
+                //width: 45%;
+                // @include from(tablet-l) {
+                //     @include column(1/4, $gutter: 5, $cycle: 4);
+                // }
+                & > a {
+                    @include font-size(15);
+                    position: relative;
+                    display: inline-block;
+                    text-decoration: none;
+                    font-weight: normal;
+                    color: #ffffff;
+                    padding-right: 25px;
+                }
+                & > ul.menu {
+                    a {
+                        @include font-size(13);
+                    }
+                }
+            }
+            a {
+                text-decoration: none;
+                color: $darker-gray-text;
+                line-height: 30px;
+                &:hover {
+                    color: darken($darker-gray-text, 5%);
+                }
+            }
+        }
+    }
+    // logos in the fotoer
+    #block-block-2 {
+      // background-color: $light-blue-bg;
+        width: 100%;
+        position: relative;
+        margin: auto;
+        display: block;
+
+        .block__content {
+            ul, ul li {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            ul {
+                text-align: center;
+
+                > li {
+                    margin-bottom: 20px;
+                    padding: 0 20px;
+
+                    @include from(tablet-l) {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-bottom:0;
+                    }
+
+                    > a {
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        text-indent: -9001px;
+                        background: transparent url(../images/sa.gov.au_white_WEB_trans.png) no-repeat 0 0;
+
+                        margin: 0 auto;
+                        @include from(tablet-l) {
+                            margin: 0;
+                        }
+
+                        &.sagov {
+                            width: 150px;
+                            height: 27px;
+                            background-image: url(../images/sa.gov.au_white_WEB_trans.png);
+                        }
+
+                        &.sa {
+                            width: 152px;
+                            height: 51px;
+                            background-image: url(../images/SouthAustLogo.png);
+                        }
+
+                        &.sagov-sw {
+                            width: 217px;
+                            height: 46px;
+                            background-image: url(../images/SWSA-Logo.png);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #block-menu-menu-footer-sub-menu {
+      // background-color: $light-blue-bg;
+        width: 100%;
+        display: inline-block;
+        padding: 0 0 60px 0;
+        @include font-size(14);
+        text-align: center;
+
+        .block__content {
+            ul,  & {
+              display: inline-block;
+              margin: auto;
+              text-align: center;
+            }
+
+            li {
+                // @include column(1/3, $gutter: 1, $cycle: 3);
+                display: inline-block;
+                text-align: center;
+                padding-left: 20px;
+                // @include from(tablet-l) {
+                //     @include column(1/5, $gutter: 1, $cycle: 5);
+                //     text-align: left;
+                // }
+                a {
+                    color: #d0e5f2;
+                    text-align: center !important;
+                    text-decoration: none;
+                    @include font-size(13);
+                    &::before{
+                      display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Page bottom region
+.page-bottom-wrapper {
+    background-color: $blue-bg;
+    position: relative;
+    // &:before {
+    //     content: "";
+    //     display: block;
+    //     height: 10px;
+    //     width: 100%;
+    //     background: url(../images/bars.svg);
+    //     background-size: 100%;
+    //     position: absolute;
+    //     bottom: 100%;
+    //     @include from(tablet-l) {
+    //         width: 45%;
+    //     }
+    // }
+    .region-bottom {
+        text-align: center;
+        padding: 30px 22px;
+        @include from(desktop-mid) {
+            padding: 30px 0;
+        }
+
+        #block-block-16 {
+            p {
+
+                color: #ffffff;
+                @include font-size($base-font-size);
+                text-align: center;
+                @include from(tablet-l) {
+                    text-align: left;
+                }
+                a {
+                    color: #ffffff;
+                    &:focus,
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        #block-block-3 {
+            position: relative;
+            display: block;
+            width: 340px;
+            margin: auto;
+            margin-top: 71px;
+            @include from(tablet-l) {
+                width: 26%;
+                display: inline-block;
+                margin: initial;
+            }
+            img {
+                position: absolute;
+                bottom: 0;
+                width: 40%;
+                left: 0;
+                &:nth-child(2) {
+                    left: 50%;
+                }
+            }
+        }
+        #block-block-13 {
+
+          color: #d0e5f2;
+          @include font-size(14);
+        }
+    }
+}
+
+
+// Mailing list signup
+#block-bean-mailing-list-signup {
+
+    margin-bottom: 60px;
+    @include from(tablet-l) {
+        margin-bottom: 200px;
+    }
+
+    .signup-holder {
+        max-width: 1050px;
+        margin: 0 auto;
+        background: #1c4188;//transparent url(../images/bg-gradient-blue-large.png) no-repeat 0 0;
+        background-size: cover;
+        padding: 25px 25px 25px;
+
+        @include from(tablet-l) {
+            padding: 80px 25px;
+        }
+
+        .signup-inner {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+
+            h2 {
+                color: #fff;
+                margin: 0 0 30px;
+                @include font-size(32);
+            }
+
+            form {
+                // @extend .clearfix;
+                font-size: 0;
+
+                input[type="email"],
+                input[type="text"] {
+                    line-height: 50px;
+                    padding: 0 20px;
+                    border: 0;
+                    vertical-align: top;
+                    margin: 0;
+                    @include font-size(16);
+                    // display: block;
+                    // float: left;
+
+                    display: block;
+                    width: 100%;
+                    max-width: 100%;
+                    @include from(tablet-l) {
+                        display: inline-block;
+                        width: 300px;
+                    }
+                }
+
+                button,
+                input[type="submit"] {
+                    padding: 0 30px;
+                    line-height: 50px;
+                    height: 50px;
+                    border: 0;
+                    background: #0066b3;
+                    color: #fff;
+                    vertical-align: top;
+                    margin: 0;
+                    font-weight: 400;
+                    @include font-size(16);
+                    // display: block;
+                    // float: left;
+
+                    &:hover {
+                        background-color: darken(#0066b3, 10%);
+                    }
+
+                    display: block;
+                    width: 100%;
+                    @include from(tablet-l) {
+                        display: inline-block;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}

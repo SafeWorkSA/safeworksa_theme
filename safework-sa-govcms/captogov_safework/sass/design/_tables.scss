@@ -1,0 +1,43 @@
+table,
+table.views-table {
+	// thead {
+		tr {
+			th {
+				background: #0066b3;
+				border: 0;
+				color: #fff;
+				padding: 15px 20px;
+			}
+		}
+	// }
+
+	tbody {
+		tr {
+
+			border: 0;
+			background: #fff;
+			padding: 0;
+
+			td {
+				padding: 15px 20px;
+				font-size: 16px;
+				border: 0;
+
+				a {
+					color: #4c5e9d;
+				}
+			}
+
+			&:nth-child(odd) {
+				td {
+					background: #fff;
+				}
+			}
+			&:nth-child(even) {
+				td {
+					background: #f8f8f8;
+				}
+			}
+		}
+	}
+}

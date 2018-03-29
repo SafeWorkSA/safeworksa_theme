@@ -1,0 +1,209 @@
+
+/*
+	ACCORDION
+*/
+
+/*
+  CKEDITOR EDITOR CSS
+*/
+.cke_editable .accordion-row {
+  outline-style: dotted;
+  outline-color: orange;
+  margin: 35px 0 0;
+  margin-bottom: 10px;
+  outline-width: 1px;
+  padding: 10px;
+  position: relative;
+}
+.cke_editable .accordion-row:before {
+  content: 'Accordion row';
+  line-height: 20px;
+  padding: 5px;
+  position: absolute;
+  background: orange;
+  color: #fff;
+  top: -30px;
+  left: 0;
+}
+.cke_editable .accordion-button {
+  outline-style: dotted;
+  outline-color: blue;
+  margin: 35px 0 20px;
+  margin-bottom: 10px;
+  outline-width: 1px;
+  padding: 10px;
+  position: relative;
+}
+.cke_editable .accordion-button:before {
+  content: 'Accordion button';
+  line-height: 20px;
+  padding: 5px;
+  position: absolute;
+  background: blue;
+  color: #fff;
+  top: -30px;
+  left: 0;
+}
+.cke_editable .accordion-content {
+  outline-style: dashed;
+  outline-color: green;
+  margin: 35px 0 0px;
+  outline-width: 1px;
+  padding: 10px;
+  position: relative;
+}
+.cke_editable .accordion-content:before {
+  content: 'Accordion contents';
+  line-height: 20px;
+  padding: 5px;
+  position: absolute;
+  background: green;
+  color: #fff;
+  top: -30px;
+  left: 0;
+}
+
+.cke_editable .button {
+  background: blue;
+  color: white;
+  padding: 10px 15px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/*
+  CKEDITOR EDITOR CSS
+*/
+.cke_editable {
+  .single-tab {
+    outline-style: dotted;
+    outline-color: orange;
+    margin: 35px 0 0;
+    margin-bottom: 10px;
+    outline-width: 1px;
+    padding: 10px;
+    position: relative;
+
+    &:before {
+      content: 'Single tab';
+      line-height: 20px;
+      padding: 5px;
+      position: absolute;
+      background: orange;
+      color: #fff;
+      top: -30px;
+      left: 0;
+    }
+
+    .tab-title {
+      outline-style: dotted;
+      outline-color: blue;
+      margin: 35px 0 20px;
+      margin-bottom: 10px;
+      outline-width: 1px;
+      padding: 10px;
+      position: relative;
+
+      &:before {
+        content: 'Tab title';
+        line-height: 20px;
+        padding: 5px;
+        position: absolute;
+        background: blue;
+        color: #fff;
+        top: -30px;
+        left: 0;
+      }
+    }
+
+    .tab-content {
+      outline-style: dashed;
+      outline-color: green;
+      margin: 35px 0 0px;
+      outline-width: 1px;
+      padding: 10px;
+      position: relative;
+
+      &:before {
+        content: 'Tab contents';
+        line-height: 20px;
+        padding: 5px;
+        position: absolute;
+        background: green;
+        color: #fff;
+        top: -30px;
+        left: 0;
+      }
+    }
+  }
+}
+
+/*
+  TWO&THREE COLUMNS
+*/
+.cke_editable {
+  .three-columns,
+  .two-columns {
+    outline-style: dotted;
+    outline-color: orange;
+    margin: 35px 0 0;
+    margin-bottom: 10px;
+    outline-width: 1px;
+    padding: 10px;
+    position: relative;
+
+    &:before {
+      content: 'Two columns';
+      line-height: 20px;
+      padding: 5px;
+      position: absolute;
+      background: orange;
+      color: #fff;
+      top: -30px;
+      left: 0;
+    }
+
+    .single-col {
+      outline-style: dotted;
+      outline-color: blue;
+      margin: 35px 0 20px;
+      margin-bottom: 10px;
+      outline-width: 1px;
+      padding: 10px;
+      position: relative;
+
+      &:before {
+        content: 'Single column';
+        line-height: 20px;
+        padding: 5px;
+        position: absolute;
+        background: blue;
+        color: #fff;
+        top: -30px;
+        left: 0;
+      }
+
+      &.col-1 {
+        &:before {
+          content: 'Column 1';
+        }
+      }
+      &.col-2 {
+        &:before {
+          content: 'Column 2';
+        }
+      }
+      &.col-3 {
+        &:before {
+          content: 'Column 3';
+        }
+      }
+    }
+  }
+  .three-columns {
+    &:before {
+      content: 'Three columns';
+    }
+  }
+}
+

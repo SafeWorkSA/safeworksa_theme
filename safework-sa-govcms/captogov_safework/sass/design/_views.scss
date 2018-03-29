@@ -1,0 +1,14 @@
+.views-exposed-form {
+	.views-exposed-widget .form-submit {
+		margin-top: 32px;
+		background: #0066b3;
+		color: #fff;
+		border-color: #0066b3;
+
+
+		&:hover {
+			background-color: darken(#0066b3, 10%);
+			border-color: darken(#0066b3, 10%);
+		}
+	}
+}

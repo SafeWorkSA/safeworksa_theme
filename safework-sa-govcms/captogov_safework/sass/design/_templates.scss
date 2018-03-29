@@ -1,0 +1,29 @@
+/*
+	TWO COLUMNS TEMPLATE
+*/
+.page-node .two-columns {
+	@include clearfix;
+
+	> .single-col {
+		margin-bottom: 40px;
+
+		@include from(tablet-l) {
+			@include column(1/2);
+		}
+	}
+}
+
+/*
+	THREE COLUMNS TEMPLATE
+*/
+.page-node .three-columns {
+	@include clearfix;
+	
+	> .single-col {
+		margin-bottom: 40px;
+
+		@include from(tablet-l) {
+			@include column(1/3);
+		}
+	}
+}

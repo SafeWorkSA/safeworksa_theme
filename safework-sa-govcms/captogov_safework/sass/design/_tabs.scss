@@ -1,0 +1,82 @@
+
+.tabs-container {
+	> .tabs-nav {
+		ul, ul li {
+			margin: 0 !important;
+			padding: 0;
+			list-style: none;
+		}
+
+		> ul {
+			> li {
+				@include from(tablet-p) {
+					display: inline-block;
+				}
+
+				> a {
+					display: block;
+					padding: 20px 30px;
+					cursor: pointer;
+					border-top: 0px solid #d2d3e7;
+					border-bottom: 1px solid #d2d3e7;
+					border-right: 1px solid #d2d3e7;
+					border-left: 1px solid #d2d3e7;
+					text-decoration: none;
+					background: #fff;
+					color: #6e6e6e;
+
+					@include from(tablet-p) {
+						border-left: 0px solid #d2d3e7;
+						border-top: 1px solid #d2d3e7;
+					}
+					&:focus {
+						outline: 3px solid #d2d3e7;
+						outline-offset: -3px;
+					}
+					&.active {
+						// font-weight: bold;
+
+						// outline: 5px solid #d2d3e7;
+						// outline-offset: -5px;
+						// color: #4c5e9d;
+						
+						color: #4c5e9d;
+						background: #d2d3e7;
+					}
+
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+
+				&:first-child {
+					> a {
+						border-left: 1px solid #d2d3e7;
+						border-top: 1px solid #d2d3e7;
+					}
+				}
+			}
+		}
+	}
+
+	> .single-tab {
+
+		> .tab-title {
+			display: none;
+		}
+
+		> .tab-content {
+			display: none;
+		}
+
+		&.active {
+			border: 3px solid #d2d3e7;
+			padding: 0 30px;
+			// margin-top: -1px;
+			> .tab-content {
+				display: block;
+			}
+		}
+	}
+}

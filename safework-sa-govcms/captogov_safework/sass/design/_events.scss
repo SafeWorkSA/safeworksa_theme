@@ -1,0 +1,57 @@
+/*
+	EVENTS LISTING VIEW
+*/
+
+#content .view-id-events.view-display-id-page {
+	> .view-content {
+		.views-row {
+			float: none;
+			width: 100%;
+			margin-bottom: 40px;
+
+			@include from(tablet-p) {
+				float: left;
+				@include column(1/2, $cycle: 2)
+			}
+
+			.node {
+				border: 1px solid #d2d3e7;
+
+				.field {
+					margin: 0;
+				}
+
+				.group-right {
+					padding: 30px;
+
+					h2 {
+						margin: 0 0 20px;
+						@include font-size(22);
+
+						a {
+							text-decoration: none;
+						}
+					}
+
+					.field-name-field-date {
+						color: #4c5e9d;
+						@include font-size(12);
+						margin-bottom: 15px;
+					}
+
+					.field-name-field-summary p,
+					.field-name-field-summary {
+						color: #6e6e6e;
+						@include font-size(16);
+					}
+				}
+
+				img {
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+
+

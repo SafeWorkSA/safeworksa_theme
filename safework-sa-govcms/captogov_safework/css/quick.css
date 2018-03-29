@@ -1,0 +1,4 @@
+/* Class for marking unfinished content during content load */
+.highlight {
+  background-color: #FFFF00;
+}

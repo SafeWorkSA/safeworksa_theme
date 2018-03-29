@@ -1,0 +1,48 @@
+.view-id-resources.view-display-id-page {
+	.views-exposed-widgets {
+		> div {
+			@include from(tablet-l) {
+				width: 20%;
+				padding: 0 15px 0 0;
+			}
+			&.views-widget-filter-combine {
+				@include from(tablet-l) {
+					width: 40%;
+				}
+			}
+
+			&.views-submit-button {
+				@include from(tablet-l) {
+					padding-right: 0;
+				}
+
+				input {
+					@include from(tablet-l) {
+						width: 100%;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+
+	table {
+		width: 100%;
+
+		tr {
+			th {
+				text-align: left;
+			}
+
+			td {
+				@include from(tablet-l) {
+					// width: 50%
+				}
+
+				a {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
