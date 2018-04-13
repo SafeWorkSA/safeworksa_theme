@@ -319,6 +319,7 @@ function captogov_safework_preprocess_page(&$vars) {
     //run homepage scripts
     drupal_add_js(drupal_get_path('theme', 'captogov_safework') . '/js/homepage_init.js');
   }
+
 }
 // //Customize search results page
 // function captogov_safework_preprocess_search_result(&$vars) {

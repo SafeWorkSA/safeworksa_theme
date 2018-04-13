@@ -87,6 +87,9 @@ function captogovadmin_safework_form_alter( &$form, &$form_state, $form_id ){
 // Load plugin scripts and css only on homepage
 function captogovadmin_safework_preprocess_page(&$vars) {
 	// dpm($vars);
+
+	// add path to theme to javascript variable
+	drupal_add_js('jQuery.extend(Drupal.settings, { "pathToTheme": "' . path_to_theme() . '" });', 'inline');
 }
 
 function captogovadmin_safework_preprocess_node(&$vars) {

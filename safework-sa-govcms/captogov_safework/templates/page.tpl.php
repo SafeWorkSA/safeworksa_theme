@@ -54,7 +54,7 @@
       // Block for print content
     ?>
     <div class="show-on-print">
-      <p><img src="/sites/all/themes/safework-sa-govcms/captogov_safework/images/logo.png" alt="SafeWork SA" /></p>
+      <p><img src="<?php print '/' . path_to_theme(); ?>/images/logo.png" alt="SafeWork SA" /></p>
       <?php print $breadcrumb; ?>
 
     </div>

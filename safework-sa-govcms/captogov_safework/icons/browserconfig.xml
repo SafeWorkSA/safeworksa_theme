@@ -2,7 +2,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="/sites/all/themes/safework-sa-govcms/captogov_safework/icons/mstile-150x150.png"/>
+            <square150x150logo src=""/>
             <TileColor>#da532c</TileColor>
         </tile>
     </msapplication>

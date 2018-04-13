@@ -4,6 +4,6 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
-	config.templates_files = [ Drupal.settings.basePath +   'sites/all/themes/safework-sa-govcms/captogovadmin_safework/js/js-custom-templates.js' ];
+	config.templates_files = [ Drupal.settings.basePath + Drupal.settings.pathToTheme + '/js/js-custom-templates.js' ];
 	config.templates_replaceContent = false;
 };
