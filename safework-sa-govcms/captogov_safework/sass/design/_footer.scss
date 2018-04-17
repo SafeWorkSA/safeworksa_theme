@@ -4,9 +4,14 @@ footer {
     padding-top: 80px;
 
     // set the background
-    background: #64b3e4;
-    @include from(tablet-l) {
+    background: #0066b3 url(../images/footer-bg-mobile.png) no-repeat top center;
+    background-size: contain;
+    @include from(mobile) {
+        background-position: center -100px;
+    }
+    @include from(tablet-p) {
         background: transparent url(../images/footer-bg.png) no-repeat top center;
+        background-size: auto;
         height: 1085px;
     }
 

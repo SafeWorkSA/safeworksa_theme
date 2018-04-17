@@ -215,6 +215,7 @@ body.not-front{
                 text-transform: uppercase;
                 @include font-size(14);
                 line-height: 1;
+                transition: 0.3s background-color;
 
                 &:after {
                     display: none;
@@ -223,6 +224,10 @@ body.not-front{
                 &:last-child {
                     color: #177ec2;
                     margin-left: 15px;
+                }
+
+                &:hover {
+                    background-color: #dcdcdc;
                 }
 
                 @include to(tablet-l) {

@@ -14,7 +14,7 @@ $jeet-max-width:        $container-width !default;
  * Breakpoints - Breakpoint slicer
  * https://github.com/lolmaus/breakpoint-slicer
  */
-$slicer-breakpoints: 0 480px 791px 960px 1120px 1370px 1800px;
+$slicer-breakpoints: 0 480px 768px 960px 1120px 1370px 1800px;
 $slicer-breakpoint-names: 'mobile' 'tablet-p' 'tablet-l' 'desktop' 'desktop-mid' 'desktop-xl';
 $slicer-anti-overlap-corrections: 1px !default;
 

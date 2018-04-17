@@ -91,6 +91,9 @@ $(document).ready(function() {
     });
   }
 
+  // set email subscribe email address
+  $('.js-cm-email-input').attr('placeholder', 'Email address');
+
   $('#superfish-1 > li.sf-depth-1').mouseenter(function() {
     var $t = $(this);
     var $ddNav = $t.children('ul');

@@ -79,9 +79,9 @@ scripts[] = js/jquery.royalslider.min.js
 scripts[] = plugins/mmenu/jquery.mmenu.all.min.js
 scripts[] = plugins/slick/slick.min.js
 scripts[] = plugins/stacktable/stacktable.js
-scripts[] = js/jquery-noconflict.js
 scripts[] = js/jquery.matchHeight.js
 scripts[] = js/jquery.colorbox.js
+scripts[] = js/jquery-noconflict.js
 scripts[] = js/script.js
 
 
@@ -153,7 +153,7 @@ settings[zen_skip_link_text]       = Skip to Content
 settings[zen_html5_respond_meta][] = respond
 settings[zen_html5_respond_meta][] = html5
 settings[zen_html5_respond_meta][] = meta
-settings[zen_rebuild_registry]     = 1
+settings[zen_rebuild_registry]     = 0
 settings[zen_wireframes]           = 0
 
 ; To make this sub-theme an admin theme with shortcut links next to titles,
