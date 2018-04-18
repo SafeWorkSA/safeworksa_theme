@@ -274,6 +274,12 @@ body.not-front{
                 padding: 0;
             }
         }
+
+        .field-name-field-cta-link {
+            a {
+                @extend .button;
+            }
+        }
     }
 }
 

@@ -189,6 +189,7 @@ header.header {
 
 				& > li {
 					margin-top: 20px;
+					padding-bottom: 15px;
 					text-align: left !important;
 					border: none;
 					//background-color: #ffffff;
@@ -311,14 +312,16 @@ header.header {
 			> a {
 				display: block;
 				text-indent: -9001px;
-				background: transparent url(../images/logo-small.png) no-repeat 0 0;
+				background: transparent url(../images/logo.svg) no-repeat 0 0;
 				width: 175px;
 				height: 26px;
+				background-size: 175px 26px;
 
 				@include from(desktop-mid) {
-					background: transparent url(../images/logo.png) no-repeat 0 0;
+					// background: transparent url(../images/logo.svg) no-repeat 0 0;
 					width: 261px;
 					height: 39px;
+					background-size: 261px 39px;
 				}
 			}
 		}

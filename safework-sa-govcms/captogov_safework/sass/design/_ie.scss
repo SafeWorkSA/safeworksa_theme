@@ -1,0 +1,22 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+	/* Works for IS 10 & IE 11*/
+	header.header .block-search form input[type='text'] {
+		padding: 7px 20px 8px;
+		line-height: 1;
+		border-radius: 0;
+	}
+
+	// search  page
+	body.page-search404 #content form .form-type-textfield input, body.page-search #content form .form-type-textfield input, #main .pane-search-block form .form-type-textfield input, #main .pane-search-api-page-search form .form-type-textfield input {
+		padding: 12px 20px;
+		line-height: 1;
+		border-radius: 0;
+	}
+
+	// mailing list signup
+	#block-bean-mailing-list-signup .signup-holder .signup-inner form input[type='email'], #block-bean-mailing-list-signup .signup-holder .signup-inner form input[type='text'] {
+		padding: 12px 20px;
+		line-height: 1;
+		border-radius: 0;
+	}
+}

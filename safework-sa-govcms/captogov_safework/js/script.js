@@ -50,10 +50,22 @@ $(document).ready(function() {
   // SEARCH BLOCK
   var $hSearch = $('header .block-search');
   var $hSearchInput = $hSearch.find('.form-text');
+  var $d = $(document);
   $hSearch.find('.form-submit').click(function() {
+    $d.off('click.headerSearch');
+
     if(!$hSearch.hasClass('show')) {
       $hSearch.addClass('show').addClass('animating');
       $hSearchInput.focus();
+
+      // add an event listener to hide the menu
+      $d.on('click.headerSearch', function(e) {
+        var $target = $(e.target);
+
+        if($target.parents('.block-search').length == 0) {
+          $hSearch.find('.form-submit').click();
+        }
+      });
 
       setTimeout(function() {
         $hSearch.removeClass('animating');
@@ -103,6 +115,12 @@ $(document).ready(function() {
     // console.log( $subNavOl.outerHeight())
 
     $ddNav.show();
+
+    // match heights
+    $('#superfish-1').find('li.sf-depth-2').matchHeight({
+      remove: true
+    });
+    
     // calculate height for the gray modal
     $innerModal.css('height', $subNavOl.outerHeight() + 120); // 120 for padding
 
@@ -165,6 +183,10 @@ $(document).ready(function() {
   });
   */
   /* ===== END MEGAMENU ===== */
+
+  // match heights
+  $('.view-mode-compact').matchHeight();
+  $('.node-teaser:not(.node-project)').matchHeight();
 
   //adding class to empty a tags
   $('a').each(function() {
@@ -630,9 +652,6 @@ Drupal.behaviors.my_custom_behavior = {
     jQuery3('body').toggleClass("search-closed search-open");
     jQuery3('#edit-keys-2').focus();
   });
-
-  $('.view-mode-compact').matchHeight();
-  $('.node-teaser:not(.node-project)').matchHeight();
 
   //set target="_blank" on downloads field links
   $('.node-type-project .field-name-field-file .file a').attr('target', '_blank');

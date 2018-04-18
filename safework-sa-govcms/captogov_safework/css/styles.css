@@ -570,6 +570,7 @@ header.header {
         header.header #block-superfish-1 li.sf-depth-1 > ul > li,
         header.header #block-superfish-1 li.sf-depth-1 > ol > li {
           margin-top: 20px;
+          padding-bottom: 15px;
           text-align: left !important;
           border: none;
           float: left;
@@ -679,14 +680,15 @@ header.header {
       header.header .header-logo h1.site-name > a {
         display: block;
         text-indent: -9001px;
-        background: transparent url(../images/logo-small.png) no-repeat 0 0;
+        background: transparent url(../images/logo.svg) no-repeat 0 0;
         width: 175px;
-        height: 26px; }
+        height: 26px;
+        background-size: 175px 26px; }
         @media (min-width: 1121px) {
           header.header .header-logo h1.site-name > a {
-            background: transparent url(../images/logo.png) no-repeat 0 0;
             width: 261px;
-            height: 39px; } }
+            height: 39px;
+            background-size: 261px 39px; } }
   header.header #block-block-4 {
     display: none;
     position: absolute;
@@ -1970,7 +1972,7 @@ body.not-front #page #main aside.sidebars a.active {
         color: #ffffff;
         background-color: #4c5e9d; }
 
-#block-views-project-news-button-block .button, #block-views-project-news-button-block #main .card-view .more-link a, #main .card-view .more-link #block-views-project-news-button-block a, #block-views-project-news-button-block .square-view .view .more-link a, .square-view .view .more-link #block-views-project-news-button-block a, #block-views-project-news-button-block .node-type-project #main .field-name-field-cta-buttons .field-item, .node-type-project #main .field-name-field-cta-buttons #block-views-project-news-button-block .field-item, #block-views-project-news-button-block #main .bean-image-and-text a.external, #main .bean-image-and-text #block-views-project-news-button-block a.external {
+#block-views-project-news-button-block .button, #block-views-project-news-button-block #main .card-view .more-link a, #main .card-view .more-link #block-views-project-news-button-block a, #block-views-project-news-button-block .square-view .view .more-link a, .square-view .view .more-link #block-views-project-news-button-block a, #block-views-project-news-button-block .node-type-project #main .field-name-field-cta-buttons .field-item, .node-type-project #main .field-name-field-cta-buttons #block-views-project-news-button-block .field-item, #block-views-project-news-button-block .panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link a, .panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link #block-views-project-news-button-block a, #block-views-project-news-button-block #main .bean-image-and-text a.external, #main .bean-image-and-text #block-views-project-news-button-block a.external {
   text-align: center; }
 
 .node-type-project #main .field-name-field-cta-buttons .field-item a {
@@ -4693,7 +4695,7 @@ div.video-filter {
   top: -30px;
   left: 0; }
 
-.cke_editable .button, .cke_editable #main .card-view .more-link a, #main .card-view .more-link .cke_editable a, .cke_editable .square-view .view .more-link a, .square-view .view .more-link .cke_editable a, .cke_editable .node-type-project #main .field-name-field-cta-buttons .field-item, .node-type-project #main .field-name-field-cta-buttons .cke_editable .field-item, .cke_editable #main .bean-image-and-text a.external, #main .bean-image-and-text .cke_editable a.external {
+.cke_editable .button, .cke_editable #main .card-view .more-link a, #main .card-view .more-link .cke_editable a, .cke_editable .square-view .view .more-link a, .square-view .view .more-link .cke_editable a, .cke_editable .node-type-project #main .field-name-field-cta-buttons .field-item, .node-type-project #main .field-name-field-cta-buttons .cke_editable .field-item, .cke_editable .panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link a, .panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link .cke_editable a, .cke_editable #main .bean-image-and-text a.external, #main .bean-image-and-text .cke_editable a.external {
   background: blue;
   color: white;
   padding: 10px 15px;
@@ -4973,6 +4975,21 @@ table.views-table tbody tr {
     background-color: #004980;
     border-color: #004980; }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* Works for IS 10 & IE 11*/
+  header.header .block-search form input[type='text'] {
+    padding: 7px 20px 8px;
+    line-height: 1;
+    border-radius: 0; }
+  body.page-search404 #content form .form-type-textfield input, body.page-search #content form .form-type-textfield input, #main .pane-search-block form .form-type-textfield input, #main .pane-search-api-page-search form .form-type-textfield input {
+    padding: 12px 20px;
+    line-height: 1;
+    border-radius: 0; }
+  #block-bean-mailing-list-signup .signup-holder .signup-inner form input[type='email'], #block-bean-mailing-list-signup .signup-holder .signup-inner form input[type='text'] {
+    padding: 12px 20px;
+    line-height: 1;
+    border-radius: 0; } }
+
 /* ---------- Components ----------
 @import 'components/blockquote';
 @import 'components/blocks';
@@ -5197,11 +5214,12 @@ label.option {
 /*
  * Buttons
  */
-.button > a, #main .card-view .more-link a > a, .square-view .view .more-link a > a, .node-type-project #main .field-name-field-cta-buttons .field-item > a, #main .bean-image-and-text a.external > a,
+.button > a, #main .card-view .more-link a > a, .square-view .view .more-link a > a, .node-type-project #main .field-name-field-cta-buttons .field-item > a, .panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link a > a, #main .bean-image-and-text a.external > a,
 a.button,
 #main .card-view .more-link a,
 .square-view .view .more-link a,
 .node-type-project #main .field-name-field-cta-buttons a.field-item,
+.panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link a,
 #main .bean-image-and-text a.external,
 input[type=submit] {
   -webkit-transition: all .3s;
@@ -5221,19 +5239,21 @@ input[type=submit] {
   font-size: 13px;
   font-size: 0.8125rem;
   font-weight: 600; }
-  .button > a:focus, #main .card-view .more-link a > a:focus, .square-view .view .more-link a > a:focus, .node-type-project #main .field-name-field-cta-buttons .field-item > a:focus, #main .bean-image-and-text a.external > a:focus,
+  .button > a:focus, #main .card-view .more-link a > a:focus, .square-view .view .more-link a > a:focus, .node-type-project #main .field-name-field-cta-buttons .field-item > a:focus, .panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link a > a:focus, #main .bean-image-and-text a.external > a:focus,
   a.button:focus,
   #main .card-view .more-link a:focus,
   .square-view .view .more-link a:focus,
   .node-type-project #main .field-name-field-cta-buttons a.field-item:focus,
+  .panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link a:focus,
   #main .bean-image-and-text a.external:focus,
   input[type=submit]:focus {
     outline: none; }
-  .button > a:after, #main .card-view .more-link a > a:after, .square-view .view .more-link a > a:after, .node-type-project #main .field-name-field-cta-buttons .field-item > a:after, #main .bean-image-and-text a.external > a:after,
+  .button > a:after, #main .card-view .more-link a > a:after, .square-view .view .more-link a > a:after, .node-type-project #main .field-name-field-cta-buttons .field-item > a:after, .panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link a > a:after, #main .bean-image-and-text a.external > a:after,
   a.button:after,
   #main .card-view .more-link a:after,
   .square-view .view .more-link a:after,
   .node-type-project #main .field-name-field-cta-buttons a.field-item:after,
+  .panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link a:after,
   #main .bean-image-and-text a.external:after,
   input[type=submit]:after {
     content: "";
@@ -5248,27 +5268,30 @@ input[type=submit] {
     border-right: 2px solid #ffffff;
     border-bottom: 2px solid #ffffff; }
 
-.button > a:hover, #main .card-view .more-link a > a:hover, .square-view .view .more-link a > a:hover, .node-type-project #main .field-name-field-cta-buttons .field-item > a:hover, #main .bean-image-and-text a.external > a:hover,
+.button > a:hover, #main .card-view .more-link a > a:hover, .square-view .view .more-link a > a:hover, .node-type-project #main .field-name-field-cta-buttons .field-item > a:hover, .panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link a > a:hover, #main .bean-image-and-text a.external > a:hover,
 a.button:hover,
 #main .card-view .more-link a:hover,
 .square-view .view .more-link a:hover,
 .node-type-project #main .field-name-field-cta-buttons a.field-item:hover,
+.panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link a:hover,
 #main .bean-image-and-text a.external:hover,
 input[type=submit]:hover,
 .button:focus,
 #main .card-view .more-link a:focus,
 .square-view .view .more-link a:focus,
 .node-type-project #main .field-name-field-cta-buttons .field-item:focus,
+.panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link a:focus,
 #main .bean-image-and-text a.external:focus {
   background-color: #4c5e9d;
   color: #fff;
   text-decoration: none; }
 
-.button > a.external:after, #main .card-view .more-link a > a.external:after, .square-view .view .more-link a > a.external:after, .node-type-project #main .field-name-field-cta-buttons .field-item > a.external:after, #main .bean-image-and-text a.external > a.external:after,
+.button > a.external:after, #main .card-view .more-link a > a.external:after, .square-view .view .more-link a > a.external:after, .node-type-project #main .field-name-field-cta-buttons .field-item > a.external:after, .panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link a > a.external:after, #main .bean-image-and-text a.external > a.external:after,
 a.button.external:after,
 #main .card-view .more-link a.external:after,
 .square-view .view .more-link a.external:after,
 .node-type-project #main .field-name-field-cta-buttons a.external.field-item:after,
+.panel-week-from-now .bean-image-and-text.default .field-name-field-cta-link a.external:after,
 #main .bean-image-and-text a.external:after {
   border: none;
   -webkit-transform: none;
