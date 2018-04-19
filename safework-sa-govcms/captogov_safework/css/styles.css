@@ -3177,8 +3177,8 @@ div.panels-ipe-placeholder {
       color: #4c5e9d;
       font-weight: 600; }
       #main .pane-quicklinks .views-row a img {
-        max-width: 100%;
-        width: auto; }
+        max-width: 100px;
+        width: 100px; }
   #main .pane-quicklinks a:after {
     display: none; }
 
