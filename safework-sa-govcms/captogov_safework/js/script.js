@@ -50,7 +50,7 @@ $(document).ready(function() {
   // SEARCH BLOCK
   var $hSearch = $('header .block-search');
   var $hSearchInput = $hSearch.find('.form-text');
-  var $d = $(document);
+  var $d = jQuery3(document);
   $hSearch.find('.form-submit').click(function() {
     $d.off('click.headerSearch');
 
