@@ -36,7 +36,8 @@
 /* ---------- Import reset of govcms styles ---------- */
 /* GOVCMS RESET */
 html {
-  font-size: 100%; }
+  font-size: 100%;
+  word-spacing: -0.1em; }
 
 body {
   background-color: #ffffff; }
@@ -193,7 +194,7 @@ h1, h2, h3, h4, h5 {
   font-family: "Din", Helvetica, Arial, sans-serif;
   color: #4c5e9d;
   font-weight: normal;
-  margin: 50px 0; }
+  margin: 30px 0; }
 
 h1 {
   color: #154c91;
@@ -351,8 +352,10 @@ table.large-only {
   color: #143f88;
   font-weight: bold; }
 
-span.file img, span.file a {
+span.file {
   display: inline-block; }
+  span.file img, span.file a {
+    display: inline-block; }
 
 input {
   max-width: 100%; }
@@ -364,8 +367,6 @@ img {
   margin-top: 30px;
   margin-left: 30px;
   list-style-image: url("../images/icon-list.png"); }
-  #content ul li {
-    margin-bottom: 5px; }
 
 textarea:focus, input:focus {
   outline: none; }
@@ -1648,8 +1649,8 @@ Internal page styles
       background-color: #4c5e9d; }
 
 .field-name-body p {
-  margin-top: 30px;
-  margin-bottom: 30px; }
+  margin-top: 20px;
+  margin-bottom: 20px; }
 
 section.region-sidebar-second {
   background-color: #F8F7F7; }
@@ -2839,6 +2840,12 @@ body.not-front #main.has-sidebars aside.sidebars {
   @media (max-width: 1370px) {
     .panel-homepage-banner .view-homepage-banner {
       margin-top: 60px; } }
+  @media (min-width: 1121px) {
+    .panel-homepage-banner .view-homepage-banner {
+      margin-top: -170px; } }
+  @media (min-width: 1371px) {
+    .panel-homepage-banner .view-homepage-banner {
+      margin-top: 0; } }
   .panel-homepage-banner .view-homepage-banner .views-field-field-slide-image .field-content {
     position: absolute;
     top: 0;
@@ -2854,7 +2861,11 @@ body.not-front #main.has-sidebars aside.sidebars {
     background-size: cover;
     padding: 40px;
     margin: 0 auto; }
-    @media (min-width: 769px) {
+    @media (min-width: 1121px) {
+      .panel-homepage-banner .view-homepage-banner div.views-field-nothing {
+        position: absolute;
+        right: 75px; } }
+    @media (min-width: 1371px) {
       .panel-homepage-banner .view-homepage-banner div.views-field-nothing {
         position: absolute;
         right: 200px; } }
@@ -3064,13 +3075,23 @@ body.page-search #content form,
   font-size: 16px;
   padding: 0 30px;
   max-width: 600px; }
-  @media (min-width: 769px) {
+  @media (min-width: 1121px) {
+    #main .pane-block-15,
+    #main .pane-search-block,
+    #main .pane-search-api-page-search {
+      max-width: 50%;
+      margin: 0 30px;
+      top: 50px;
+      padding-right: 40px; } }
+  @media (min-width: 1371px) {
     #main .pane-block-15,
     #main .pane-search-block,
     #main .pane-search-api-page-search {
       width: 50%;
-      margin-left: 10%;
-      padding: 0 60px; } }
+      margin: 0 0 0 10%;
+      padding: 0 60px;
+      top: auto;
+      max-width: 600px; } }
 
 @media (min-width: 769px) {
   #main .pane-block-15 {

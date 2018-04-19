@@ -149,6 +149,8 @@ body.not-front{
 }
 // #panels-ipe-paneid-15
 .panel-homepage-banner {
+
+
     .view-homepage-banner {
         min-height: 300px;
 
@@ -158,6 +160,12 @@ body.not-front{
 
         @include to(desktop-mid) {
             margin-top: 60px;
+        }
+        @include from(desktop-mid) {
+            margin-top: -170px;
+        }
+        @include from(desktop-xl) {
+            margin-top: 0;
         }
 
         .views-field-field-slide-image {
@@ -187,7 +195,11 @@ body.not-front{
             padding: 40px;
             margin: 0 auto;
 
-            @include from(tablet-l) {
+            @include from(desktop-mid) {
+                position: absolute;
+                right: 75px;
+            }
+            @include from(desktop-xl) {
                 position: absolute;
                 right: 200px;
             }
@@ -448,9 +460,20 @@ body.page-search #content,
         padding: 0 30px;
         max-width: 600px;
         @include from(tablet-l) {
+        }
+        @include from(desktop-mid) {
+            max-width: 50%;
+            margin: 0 30px;
+            // max-width: 38%;
+            top: 50px;
+            padding-right: 40px;
+        }
+        @include from(desktop-xl) {
             width: 50%;
-            margin-left: 10%;
+            margin: 0 0 0 10%;
             padding: 0 60px;
+            top: auto;
+            max-width: 600px;
         }
     }
     .pane-block-15 {
