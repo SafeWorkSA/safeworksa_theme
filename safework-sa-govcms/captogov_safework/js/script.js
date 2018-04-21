@@ -259,6 +259,40 @@ function createAccordions() {
     ++accordionX;
   }
 
+  // handle accordion open event
+  $('.accordion-button').click(function(e) {
+    var $t = $(this);
+    var $p = $t.parent();
+    // since this fires before the accordion is opened, expaneded == false means that we're opening the accordion
+    var open = $p.attr('aria-expanded') == 'false' ? true : false,
+        openClass;
+    if(open) {
+      openClass = 'open';
+      $p.attr('aria-expanded', 'true');
+      $p.attr('open', '');
+    } else {
+      openClass = '';
+      $p.attr('aria-expanded', 'false');
+      $p.removeAttr('open');
+    }
+
+    $p.children('.accordion-content').removeClass('open').addClass(openClass);
+
+
+    if(open === true) {
+      // $p.attr('id', 'temp');
+      // window.location.hash = $p.attr('data-label');
+      // $p.attr('id', $p.attr('data-label'));
+    } else {
+      if(history) {
+        // history.replaceState('', document.title, window.location.pathname); // nice and clean
+      } else {
+        // window.location.hash = '';
+      }
+      e.preventDefault();
+      return false;
+    }
+  });
 
 }
 
@@ -555,6 +589,12 @@ Drupal.behaviors.my_custom_behavior = {
     jQuery3('.card-wrapper').slick('resize');
   });
 
+  $('.card-wrapper .node').click(function() {
+    var $t = $(this);
+    var $a = $t.find('.field-name-title a');
+    document.location = $a.attr('href');
+  });
+
   //    //Project related news slick slider
   // jQuery3('.view-related-new-stories .view-content').slick({
   //   mobileFirst: true,
@@ -610,6 +650,8 @@ Drupal.behaviors.my_custom_behavior = {
   if($viewForm.length > 0){
     $viewForm.attr("placeholder", "Enter search terms");
   }
+
+  $('#search-block-form input[type="text"]').attr('placeholder', 'Search SafeWork SA');
 
   //News article share links
   var newsPage = window.location.href;

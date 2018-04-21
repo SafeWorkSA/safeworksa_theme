@@ -278,6 +278,15 @@ body.not-front{
                 margin-bottom: 0;
                 text-align: left;
             }
+
+            a {
+                padding: 0;
+                border: 0;
+
+                img {
+                    vertical-align: middle;
+                }
+            }
         }
 
         .text, .cta {
@@ -342,9 +351,9 @@ body.page-search #content,
 #main .pane-search-api-page-search {
 
     form {
-        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
         @extend .clearfix;
-        width: 380px;
+        width: 420px;
         padding: 0;
         background: #fff;
         border: 0;
@@ -377,25 +386,47 @@ body.page-search #content,
             }
         }
         input[type="submit"] {
-            width: 100px;
+            width: 140px;
             line-height: 50px;
-            padding: 0;
             border: 0;
             margin: 0;
             background-color: #1c4188;
             height: 50px;
 
             border: none;
-            background: $secondary-color url(../images/search.png) no-repeat center center;
-            font-size: 0px;
+            background: $secondary-color url(../images/search.png) no-repeat 94px 17px;
+            font-size: 12px;
             transition: background 0.5s ease-in-out;
+            padding: 0 20px 0 0;
+            color: #fff;
+            background-size: 14px;
 
             &:hover {
-                background: $primary-color url(../images/search.png) no-repeat center center;
+                background-color: $primary-color;
             }
         }
     }
 }
+
+//search bar to full width on search screens
+body.page-search404 #content,
+body.page-search #content {
+
+    form {
+        width: 100%;
+
+        .form-type-textfield {
+            width: calc(100% - 140px);
+
+            input {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+
 
 // welcome text panel
 .panel-text-above-search .pane-content {
@@ -416,8 +447,9 @@ body.page-search #content,
     p {
         @include font-size(20);
         color: #154c91;
-        line-height: 1.2;
+        line-height: 1.4 !important;
         margin: 0 0 30px;
+        word-spacing: -2px;
     }
 }
 

@@ -257,7 +257,15 @@ img{
 
 		li{
 			// margin-bottom: 5px;
+
+			ul {
+				margin-top: 0;
+			}
 		}
+	}
+	ol ul,
+	ul ul {
+		margin-top: 0;
 	}
 }
 textarea:focus, input:focus{

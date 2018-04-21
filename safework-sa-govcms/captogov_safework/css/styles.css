@@ -367,6 +367,12 @@ img {
   margin-top: 30px;
   margin-left: 30px;
   list-style-image: url("../images/icon-list.png"); }
+  #content ul li ul {
+    margin-top: 0; }
+
+#content ol ul,
+#content ul ul {
+  margin-top: 0; }
 
 textarea:focus, input:focus {
   outline: none; }
@@ -1232,7 +1238,8 @@ body {
   #main .card-view .card-wrapper .view-mode-compact.node-webform,
   #main .card-view .card-wrapper .view-mode-compact.node-type-tableau-dashboard {
     outline: none;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    cursor: pointer; }
     #main .card-view .view-content .views-row .field-type-image a,
     #main .card-view .view-content .view-mode-compact.node-page .field-type-image a,
     #main .card-view .view-content .view-mode-compact.node-project .field-type-image a,
@@ -1533,7 +1540,7 @@ Internal page styles
 
 .breadcrumb {
   text-align: center;
-  padding: 15px 0 15px;
+  padding: 30px 0;
   margin-bottom: 30px !important;
   background: rgba(250, 250, 250, 0.5);
   font-size: 14px;
@@ -2663,6 +2670,10 @@ details {
       display: none; }
   details[open] > summary {
     background-image: url(../images/icon-arrow-up.png); }
+  details > .accordion-content {
+    display: none; }
+    details > .accordion-content.open {
+      display: block; }
 
 /*
 [aria-expanded='true'] .accordion-button,
@@ -2926,6 +2937,11 @@ body.not-front #main.has-sidebars aside.sidebars {
         margin-right: 15px;
         margin-bottom: 0;
         text-align: left; } }
+    .panel-week-from-now .bean-image-and-text.default .field-type-image a {
+      padding: 0;
+      border: 0; }
+      .panel-week-from-now .bean-image-and-text.default .field-type-image a img {
+        vertical-align: middle; }
   .panel-week-from-now .bean-image-and-text.default .text, .panel-week-from-now .bean-image-and-text.default .cta {
     padding: 0 20px; }
     @media (min-width: 769px) {
@@ -2972,9 +2988,9 @@ body.page-search404 #content form,
 body.page-search #content form,
 #main .pane-search-block form,
 #main .pane-search-api-page-search form {
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.35);
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.35);
-  width: 380px;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  width: 420px;
   padding: 0;
   background: #fff;
   border: 0;
@@ -3018,24 +3034,37 @@ body.page-search #content form,
   body.page-search #content form input[type="submit"],
   #main .pane-search-block form input[type="submit"],
   #main .pane-search-api-page-search form input[type="submit"] {
-    width: 100px;
+    width: 140px;
     line-height: 50px;
-    padding: 0;
     border: 0;
     margin: 0;
     background-color: #1c4188;
     height: 50px;
     border: none;
-    background: #4c5e9d url(../images/search.png) no-repeat center center;
-    font-size: 0px;
+    background: #4c5e9d url(../images/search.png) no-repeat 94px 17px;
+    font-size: 12px;
     -webkit-transition: background 0.5s ease-in-out;
     -o-transition: background 0.5s ease-in-out;
-    transition: background 0.5s ease-in-out; }
+    transition: background 0.5s ease-in-out;
+    padding: 0 20px 0 0;
+    color: #fff;
+    background-size: 14px; }
     body.page-search404 #content form input[type="submit"]:hover,
     body.page-search #content form input[type="submit"]:hover,
     #main .pane-search-block form input[type="submit"]:hover,
     #main .pane-search-api-page-search form input[type="submit"]:hover {
-      background: #004b85 url(../images/search.png) no-repeat center center; }
+      background-color: #004b85; }
+
+body.page-search404 #content form,
+body.page-search #content form {
+  width: 100%; }
+  body.page-search404 #content form .form-type-textfield,
+  body.page-search #content form .form-type-textfield {
+    width: calc(100% - 140px); }
+    body.page-search404 #content form .form-type-textfield input,
+    body.page-search #content form .form-type-textfield input {
+      width: 100%;
+      max-width: 100%; }
 
 .panel-text-above-search .pane-content {
   padding-top: 250px;
@@ -3053,8 +3082,9 @@ body.page-search #content form,
     font-size: 20px;
     font-size: 1.25rem;
     color: #154c91;
-    line-height: 1.2;
-    margin: 0 0 30px; }
+    line-height: 1.4 !important;
+    margin: 0 0 30px;
+    word-spacing: -2px; }
 
 #page {
   margin-top: 87px; }
