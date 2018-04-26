@@ -259,7 +259,7 @@ body.not-front{
 }
 
 // Safework week from now bloxk
-.panel-week-from-now {
+#main .panel-week-from-now {
     // Override govcms styling
     .bean-image-and-text.default {
         border-top: 1px solid #d2d3e7;
@@ -724,7 +724,7 @@ div.panels-ipe-placeholder {
             position: absolute;
             width: 50px;
             height: 86px;
-            margin-top: -43px;
+            margin-top: -58px;
             background: transparent url(../images/icon-date-bg.png) no-repeat 0 0;
             color: #fff;
             @include font-size(12);
