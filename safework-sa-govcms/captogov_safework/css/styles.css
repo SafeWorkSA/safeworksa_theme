@@ -4541,7 +4541,9 @@ div.video-filter {
   vertical-align: middle; }
 
 #block-views-related-content-block > h2 {
-  margin-bottom: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #d2d3e7;
+  margin: 30px 0;
   font-size: 30px;
   line-height: 35px; }
   #block-views-related-content-block > h2 > a {
