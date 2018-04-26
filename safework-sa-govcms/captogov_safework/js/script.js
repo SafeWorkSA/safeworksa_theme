@@ -376,7 +376,7 @@ function createTabs() {
 function createRelatedContent() {
   var $rContent = $('#block-views-related-content-block');
   if($rContent.length > 0) {
-    var viewHeaderHTML = $rContent.find('.view-header').html();
+    var viewHeaderHTML = $rContent.find('.view-header').html().toLowerCase();
     $rContent.children('h2').append(viewHeaderHTML);
   }
 }
