@@ -2447,11 +2447,16 @@ body #main .search-form {
 
 .node-type-news-article #content > .node .field-name-field-news-date span {
   display: inline-block;
-  background-color: #002056;
-  padding: 4px 20px;
-  color: #fff;
+  /* background-color: #002056; */
+  padding: 0;
+  color: #002056;
   font-weight: bold;
-  letter-spacing: 2px; }
+  /* letter-spacing: 2px; */
+  text-transform: uppercase;
+  /* padding-left: 10px; */
+  font-size: 14px;
+  line-height: 1;
+  margin: 0; }
 
 .node-type-news-article .field-name-field-related-links .field-item {
   border: 1px solid #F8F7F7;
