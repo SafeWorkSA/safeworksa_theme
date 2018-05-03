@@ -2994,8 +2994,6 @@ body.page-search404 #content form,
 body.page-search #content form,
 #main .pane-search-block form,
 #main .pane-search-api-page-search form {
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
   width: 420px;
   padding: 0;
   background: #fff;
@@ -3889,7 +3887,7 @@ div.workbench-info-block {
           .not-front #main .card-view .card-wrapper .view-mode-compact.node-project .group-right > .field.field-name-title,
           .not-front #main .card-view .card-wrapper .view-mode-compact.node-landing-page .group-right > .field.field-name-title,
           .not-front #main .card-view .card-wrapper .view-mode-compact.node-webform .group-right > .field.field-name-title {
-            background: rgba(0, 102, 179, 0.6);
+            background: rgba(0, 102, 179, 0.87);
             color: #fff;
             display: -webkit-box;
             display: -ms-flexbox;
@@ -3954,7 +3952,7 @@ div.workbench-info-block {
           .not-front #main .card-view .card-wrapper .view-mode-compact.node-project .group-right > .field.field-name-field-summary,
           .not-front #main .card-view .card-wrapper .view-mode-compact.node-landing-page .group-right > .field.field-name-field-summary,
           .not-front #main .card-view .card-wrapper .view-mode-compact.node-webform .group-right > .field.field-name-field-summary {
-            background: rgba(0, 102, 179, 0.6) url(../images/landing-bg.png) no-repeat top center;
+            background: rgba(0, 102, 179, 0.87) url(../images/landing-bg.png) no-repeat top center;
             background-size: cover;
             color: #fff;
             display: -webkit-box;
@@ -4315,8 +4313,6 @@ pages with constrained content
   max-width: 830px;
   padding-top: 20px; }
   .page-search #content #search-api-page-search-form {
-    -webkit-box-shadow: 0px 0px 33px 0px #818285;
-    box-shadow: 0px 0px 33px 0px #818285;
     border: none;
     padding-top: 0;
     padding-bottom: 0;
@@ -4744,7 +4740,8 @@ div.video-filter {
   margin: 35px 0 0px;
   outline-width: 1px;
   padding: 10px;
-  position: relative; }
+  position: relative;
+  display: block; }
 
 .cke_editable .accordion-content:before {
   content: 'Accordion contents';
@@ -4806,7 +4803,8 @@ div.video-filter {
     margin: 35px 0 0px;
     outline-width: 1px;
     padding: 10px;
-    position: relative; }
+    position: relative;
+    display: block; }
     .cke_editable .single-tab .tab-content:before {
       content: 'Tab contents';
       line-height: 20px;

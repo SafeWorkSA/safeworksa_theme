@@ -351,7 +351,7 @@ body.page-search #content,
 #main .pane-search-api-page-search {
 
     form {
-        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+        //box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
         @extend .clearfix;
         width: 420px;
         padding: 0;
@@ -1119,7 +1119,7 @@ div.workbench-info-block {
                             transition: 0.3s all;
 
                             &.field-name-title {
-                                background: rgba(0,102,179,0.6);
+                                background: rgba(0,102,179,0.87);
                                 color: #fff;
                                 display: flex;
                                 align-items: center;
@@ -1151,7 +1151,7 @@ div.workbench-info-block {
                             }
 
                             &.field-name-field-summary {
-                                background: rgba(0,102,179,0.6) url(../images/landing-bg.png) no-repeat top center;
+                                background: rgba(0,102,179,0.87) url(../images/landing-bg.png) no-repeat top center;
                                 background-size: cover;
                                 color: #fff;
                                 display: flex;
@@ -1498,7 +1498,7 @@ pages with constrained content
 
         #search-api-page-search-form {
             @extend .clearfix;
-            box-shadow: 0px 0px 33px 0px $primary-gray-text;
+            //box-shadow: 0px 0px 33px 0px $primary-gray-text;
             border: none;
             padding-top: 0;
             padding-bottom: 0;
