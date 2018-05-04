@@ -507,10 +507,10 @@ header.header {
   header.header #block-superfish-1 {
     padding-top: 50px;
     float: left; }
-    @media (max-width: 1370px) {
+    @media (max-width: 1365px) {
       header.header #block-superfish-1 {
         display: none; } }
-    @media (max-width: 1370px) {
+    @media (max-width: 1365px) {
       header.header #block-superfish-1 #superfish-1 a.sf-depth-1 {
         font-size: 15px;
         font-size: 0.9375rem; }
@@ -701,7 +701,7 @@ header.header {
     position: absolute;
     top: 15px;
     right: 20px; }
-    @media (max-width: 1370px) {
+    @media (max-width: 1365px) {
       header.header #block-block-4 {
         display: block; } }
     header.header #block-block-4 .mobile-menu-button {
@@ -800,13 +800,6 @@ header.header {
       width: 48px;
       height: 48px;
       padding: 0; }
-      @media (min-width: 961px) {
-        header.header .block-search form input[type="submit"] {
-          background-position: 100px center;
-          text-indent: 0;
-          width: 150px;
-          height: 40px;
-          padding: 0 30px; } }
       header.header .block-search form input[type="submit"]:hover {
         background-color: #004980; }
 
@@ -2830,7 +2823,7 @@ body.not-front #main.has-sidebars aside.sidebars {
     body.not-front #main.has-sidebars aside:last-child {
       margin-right: 0%; } }
 
-@media (min-width: 1371px) {
+@media (min-width: 1366px) {
   body.not-front #main.has-sidebars #content {
     /*
                     // Virtual centering in grid size
@@ -2854,13 +2847,13 @@ body.not-front #main.has-sidebars aside.sidebars {
 
 .panel-homepage-banner .view-homepage-banner {
   min-height: 300px; }
-  @media (max-width: 1370px) {
+  @media (max-width: 1365px) {
     .panel-homepage-banner .view-homepage-banner {
       margin-top: 60px; } }
   @media (min-width: 1121px) {
     .panel-homepage-banner .view-homepage-banner {
       margin-top: -170px; } }
-  @media (min-width: 1371px) {
+  @media (min-width: 1366px) {
     .panel-homepage-banner .view-homepage-banner {
       margin-top: 0; } }
   .panel-homepage-banner .view-homepage-banner .views-field-field-slide-image .field-content {
@@ -2882,7 +2875,7 @@ body.not-front #main.has-sidebars aside.sidebars {
       .panel-homepage-banner .view-homepage-banner div.views-field-nothing {
         position: absolute;
         right: 75px; } }
-    @media (min-width: 1371px) {
+    @media (min-width: 1366px) {
       .panel-homepage-banner .view-homepage-banner div.views-field-nothing {
         position: absolute;
         right: 200px; } }
@@ -3119,7 +3112,7 @@ body.page-search #content form {
       margin: 0 30px;
       top: 50px;
       padding-right: 40px; } }
-  @media (min-width: 1371px) {
+  @media (min-width: 1366px) {
     #main .pane-block-15,
     #main .pane-search-block,
     #main .pane-search-api-page-search {
