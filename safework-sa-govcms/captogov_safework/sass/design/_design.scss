@@ -306,7 +306,7 @@ Internal page styles
 
         .breadcrumb {
             text-align: center;
-            padding: 30px 0;;
+            padding: 20px 0;;
             margin-bottom: 60px !important;
             background: rgba(250,250,250,0.5);
             @include font-size(14);
@@ -1276,6 +1276,21 @@ Search results*/
         //News internal node page
         .node-type-news-article {
             #content > .node {
+                .field-name-field-category {
+                    .field-item {
+                        display: inline-block;
+                        /* background-color: #002056; */
+                        padding: 0;
+                        color: #002056;
+                        font-weight: bold;
+                        /* letter-spacing: 2px; */
+                        text-transform: uppercase;
+                        /* padding-left: 10px; */
+                        font-size: 18px;
+                        line-height: 1;
+                        margin: 0;
+                    }
+                }
                 .field-name-field-news-date {
                     span {
                         display: inline-block;

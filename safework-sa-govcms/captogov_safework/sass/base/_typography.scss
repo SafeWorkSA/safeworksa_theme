@@ -292,6 +292,8 @@ textarea:focus, input:focus{
 .toc-filter{
 	padding: 10px 0px;
 	border-bottom: 4px solid $primary-color-lighter;
+	margin-bottom: 60px;
+
 	// @include title-bar($secondary-color, before, 0);
 	&:before{
 		left: 0;
