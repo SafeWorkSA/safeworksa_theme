@@ -16,6 +16,9 @@
 var hashTarget = window.location.hash,
     hashTarget = hashTarget.replace('#', '');
 
+// delete hash so the page won't scroll to it
+window.location.hash = "";
+
 (function ($, Drupal, window, document, undefined) {
 
 
@@ -227,7 +230,34 @@ $(document).ready(function() {
 
   // Related content funcitonality
   createRelatedContent();
+
+  // handle scroll to right place
+  handleHashScroll();
 });
+
+// Handle hash scrolling
+function handleHashScroll() {
+  var $w = jQuery3(window);
+  // if there is a hash to scroll to, do it now 
+  $w.on('load', function() {
+    if (hashTarget && hashTarget != '' && $("#" + hashTarget).length > 0) {
+      setTimeout(function() {
+        var adminBarHeight = 0;
+        if($('#navbar-administration').length > 0) {
+          adminBarHeight = $('#navbar-administration').outerHeight();
+        }
+
+        var hHeight = $('header').outerHeight();
+        var offsetTop = $("#" + hashTarget).offset().top - adminBarHeight - hHeight - 80;
+
+        $('html, body').animate({
+          scrollTop: offsetTop
+        }, 700, 'swing', function () {});
+        window.location.hash = hashTarget;
+      }, 200);
+    }
+  });
+}
 
 function createAccordions() {
 
@@ -252,12 +282,14 @@ function createAccordions() {
   // now that we have a list of Tabs & their contents, wrap them in <details>
   for(var a in accordionElementsArr) {
     var aLabel = 'accordion-' + accordionX;
-    var isOpenTag = '';//(aLabel == hashTarget) ? 'open' : '';
+    var isOpenTag = (aLabel == hashTarget) ? 'open' : '';
     var isAriaExpanded = (aLabel == hashTarget) ? 'true' : 'false';
-    accordionElementsArr[a].wrapAll('<details data-label="'+aLabel+'" aria-expanded="false" data-accordion-x="'+accordionX+'" '+isOpenTag+'></details>');
+    accordionElementsArr[a].wrapAll('<details id="accordion-'+accordionX+'" data-label="'+aLabel+'" aria-expanded="'+isAriaExpanded+'" data-accordion-x="'+accordionX+'" '+isOpenTag+' class="'+isOpenTag+'"></details>');
 
     ++accordionX;
   }
+
+  $('details.open > .accordion-content').addClass('open');
 
   // handle accordion open event
   $('.accordion-button').click(function(e) {
@@ -280,14 +312,14 @@ function createAccordions() {
 
 
     if(open === true) {
-      // $p.attr('id', 'temp');
-      // window.location.hash = $p.attr('data-label');
-      // $p.attr('id', $p.attr('data-label'));
+      $p.attr('id', 'temp');
+      window.location.hash = $p.attr('data-label');
+      $p.attr('id', $p.attr('data-label'));
     } else {
       if(history) {
-        // history.replaceState('', document.title, window.location.pathname); // nice and clean
+        history.replaceState('', document.title, window.location.pathname); // nice and clean
       } else {
-        // window.location.hash = '';
+        window.location.hash = '';
       }
       e.preventDefault();
       return false;
@@ -298,34 +330,34 @@ function createAccordions() {
 
 // Create galleries
 function createGalleries() {
-	var $ = jQuery3;
-	var $gFields = $('.field-name-field-image-gallery');
-	$gFields.each(function() {
-		var $gallery = $(this);
+  var $ = jQuery3;
+  var $gFields = $('.field-name-field-image-gallery');
+  $gFields.each(function() {
+    var $gallery = $(this);
 
-		var si = $gallery.children().royalSlider({
-			addActiveClass: true,
-			arrowsNav: true,
-			controlNavigation: 'none',
-			autoScaleSlider: true, 
-			autoScaleSliderWidth: 900,     
-			autoScaleSliderHeight: 600,
-			loop: true,
-			fadeinLoadedSlide: false,
-			globalCaption: true,
-			keyboardNavEnabled: true,
-			globalCaptionInside: false,
+    var si = $gallery.children().royalSlider({
+      addActiveClass: true,
+      arrowsNav: true,
+      controlNavigation: 'none',
+      autoScaleSlider: true, 
+      autoScaleSliderWidth: 900,     
+      autoScaleSliderHeight: 600,
+      loop: true,
+      fadeinLoadedSlide: false,
+      globalCaption: true,
+      keyboardNavEnabled: true,
+      globalCaptionInside: false,
 
-			visibleNearby: {
-				enabled: true,
-				centerArea: 0.75,
-				center: true,
-				breakpoint: 650,
-				breakpointCenterArea: 0.64,
-				navigateByCenterClick: true
-			}
-		}).data('royalSlider');
-	});
+      visibleNearby: {
+        enabled: true,
+        centerArea: 0.75,
+        center: true,
+        breakpoint: 650,
+        breakpointCenterArea: 0.64,
+        navigateByCenterClick: true
+      }
+    }).data('royalSlider');
+  });
 }
 
 function createTabs() {
@@ -340,7 +372,10 @@ function createTabs() {
 
 
   // Create tab functionality
+  var tabRowX = 0;
   $('.tabs-container').each(function() {
+    ++tabRowX;
+
     var $t = $(this);
     var tabX = 0;
     var tabNavHTML = '';
@@ -350,13 +385,24 @@ function createTabs() {
       var $tab = $(this);
       var title = $tab.children('.tab-title').text().trim();
       var contentHTML = $tab.children('.tab-content').html();
-      var activeClass = (tabX == 1) ? 'active' : '';
+      var activeClass = '';//(tabX == 1) ? 'active' : '';
+      var tabId = 'tab-'+tabRowX+'-'+tabX;
+
+      if(hashTarget == tabId) {
+        activeClass = 'active';
+      }
+
 
       // add identifier classes
-      $tab.addClass('tab-'+tabX).addClass(activeClass);
+      $tab.addClass(tabId).addClass(activeClass);
 
-      tabNavHTML += '<li><a class="btn-tab-nav btn-tab-nav-'+tabX+' '+activeClass+'" data-tab="'+tabX+'" href="#tab-'+tabX+'">'+title+'</a></li>';
+      tabNavHTML += '<li><a id="'+tabId+'" data-label="'+tabId+'" class="btn-tab-nav btn-tab-nav-'+tabRowX+'-'+tabX+' '+activeClass+'" data-tab="'+tabRowX+'-'+tabX+'" href="#tab-'+tabRowX+'-'+tabX+'">'+title+'</a></li>';
     });
+
+    if($t.children('.single-tab.active').length == 0) {
+      $t.find('.single-tab.tab-'+tabX+'-1, .btn-tab-nav-'+tabX+'-1').addClass('active');
+    }
+
     $t.prepend('<div class="tabs-nav"><ul>'+tabNavHTML+'</ul></div>');
   });
 
@@ -368,16 +414,23 @@ function createTabs() {
     $tabContainer.find('.active').removeClass('active').end()
       .find('.tab-'+tabX).addClass('active').end()
       .find('.btn-tab-nav-'+tabX).addClass('active');
-    // don't add hash to url
-    e.preventDefault();
+
+      $t.attr('id', 'temp');
+      window.location.hash = $t.attr('data-label');
+      $t.attr('id', $t.attr('data-label'));
+
+      e.preventDefault();
+      return false;
   });
 }
 
 function createRelatedContent() {
   var $rContent = $('#block-views-related-content-block');
   if($rContent.length > 0) {
-    var viewHeaderHTML = $rContent.find('.view-header').html().toLowerCase().replace('view all', 'View all');
+    var viewHeaderHTML = $rContent.find('.view-header').html().toLowerCase();
     $rContent.children('h2').append(viewHeaderHTML);
+
+    
   }
 }
 
@@ -407,10 +460,10 @@ Drupal.behaviors.my_custom_behavior = {
     //   }
     // });
 
- 	/*
+  /*
     Accordions
   //Hide content
- 	var accordionContainers = $('.accordion-container').hide();
+  var accordionContainers = $('.accordion-container').hide();
 
   //add elements and roles for accessibility
   jQuery3('.accordion-button').each(function(i, obj) {
@@ -471,11 +524,11 @@ Drupal.behaviors.my_custom_behavior = {
    (./  \.)     (__)  (__) (__)\_)-' '-(_/(_")("_)(__) (__)
   */
 
-  	//hide show ADG tag on mobile menu
-  	$('.mobile-menu-button').click(function() {
-  		// $('.site-name').fadeOut();
-  		$(this).toggleClass('open-menu');
-	});
+    //hide show ADG tag on mobile menu
+    $('.mobile-menu-button').click(function() {
+      // $('.site-name').fadeOut();
+      $(this).toggleClass('open-menu');
+  });
 
 
   //mmenu mobile menu, see http://mmenu.frebsite.nl
@@ -670,9 +723,9 @@ Drupal.behaviors.my_custom_behavior = {
   $('.menu-block-2 > ul > li > a').click(function(e) {
     // e.preventDefault();
     if (e.preventDefault) {
-    	// e.preventDefault();
+      // e.preventDefault();
     } else {
-    	// e.returnValue = false;
+      // e.returnValue = false;
     }
   });
   //make tables stack on mobile
@@ -700,11 +753,11 @@ Drupal.behaviors.my_custom_behavior = {
 
   //Make footer sidenav top level item non-clickable
   jQuery3('#block-menu-menu-footer-menu .block__content > ul.menu > li.menu__item > a').click(function(e) {
-  	// e.preventDefault();
-  	if (e.preventDefault) {
-    	e.preventDefault();
+    // e.preventDefault();
+    if (e.preventDefault) {
+      e.preventDefault();
     } else {
-    	e.returnValue = false;
+      e.returnValue = false;
     }
    });
 
