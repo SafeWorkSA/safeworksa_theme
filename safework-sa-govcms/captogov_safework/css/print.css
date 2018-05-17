@@ -1,16 +1,6 @@
 .show-on-print {
 	display: none;
 }
-
-@page  
-{ 
-    size: auto;   /* auto is the initial value */ 
-
-    /* this affects the margin in the printer settings */ 
-    /*margin: 25mm 25mm 	25mm 25mm;  */
-    overflow: visible;
-} 
-
 @media print {
 	.show-on-print {
 		display: block;
@@ -21,14 +11,16 @@
 		height: auto; 	
 	}
 
+	html {
+		width: initial !important;
+	}
+
 	#page {
 		margin-top: 0;
 	}
 
 	body {
 		color: #000 !important;
-		/*padding: 0 20px !important;*/
-		margin: 0 !important;
 	}
 
 	body,h1, h2, h3, h4, h5, p, a, li {
@@ -36,12 +28,6 @@
 		color: #000;
 	}
 
-	body #content {
-		max-width: auto !important;
-		margin: initial !important;
-		position: initial !important;
-		float: none;
-	}
 
 	body .content-header,
 	body .banner-wrapper,
@@ -110,16 +96,16 @@
 		display: block !important;
 	}
 
-	details > .accordion-content {
-		display: block !important;
-	}
-
 	details > summary {
 		background: transparent;
 		padding: 0;
 		color: #000;
 		font-size: 20px;
 		font-weight: bold;
+	}
+
+	details > .accordion-content {
+		display: block !important;
 	}
 
 
