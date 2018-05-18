@@ -66,7 +66,10 @@ Header styles
 .not-front {
 	header.header {
 		#block-superfish-1 {
-			margin-right: 70px;
+			@include from(desktop-full) {
+				margin-right: 70px;
+			}
+
 			#menu-914-1 {
 				padding-left: 0px;
 			}
@@ -111,7 +114,13 @@ header.header {
 		}
 
 		#superfish-1 {
-			margin-left: 80px;
+			margin-left: 0px;
+			@include from(desktop-xl) {
+				margin-left: 20px;
+			}
+			@include from(desktop-full) {
+				margin-left: 80px;
+			}
 		}
 
 		@extend .clearfix;
@@ -127,6 +136,12 @@ header.header {
 			> a {
 				cursor: default;
 				font-weight: bold;
+
+				&.sf-depth-1 {
+					@include to(desktop-xl) {
+						@include font-size(18);
+					}
+				}
 			}
 
 			> ul {
@@ -278,6 +293,9 @@ header.header {
 	.header__inner {
 		padding: 30px 30px;
 		@include from(desktop-mid) {
+			padding: 0 20px;
+		}
+		@include from(desktop-full) {
 			padding: 0 60px;
 		}
 
@@ -414,8 +432,12 @@ header.header {
 			top: 23px;
 		}
 
-		@include from(desktop-mid) {
-			// right: 0;
+		@include from(desktop-xl) {
+			right: 0;
+		}
+
+		@include from(desktop-full) {
+			right: 65px;
 		}
 
 
@@ -474,11 +496,12 @@ header.header {
 				border: 0;
 				background: lighten(#61b2e4, 10%);
 				color: #fff;
-				line-height: 40px;
+				line-height: 48px;
 				padding: 0 20px;
 				height: auto;
 				float: none;
 				transition: 0.3s all;
+				border-radius: 0;
 
 				&::ms-placeholder {
 					color: #fff;
@@ -493,7 +516,7 @@ header.header {
 
 				line-height: 48px;
 				@include from(desktop) {
-					line-height: 40px;
+					// line-height: 40px;
 				}
 			}
 			input[type="submit"] {
