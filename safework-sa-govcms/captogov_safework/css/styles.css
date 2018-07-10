@@ -5390,4 +5390,7 @@ a.button.external:after,
   font-size: 13px;
   font-size: 0.8125rem; }
 
+.nswm .card { height: 266px; width: 400px; border: solid black 1px; float: left; }
+.nswm .card a { padding: 10px; }
+
 /*# sourceMappingURL=styles.css.map */
