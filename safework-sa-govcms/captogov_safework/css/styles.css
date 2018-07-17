@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 @font-face {
   font-family: 'Din';
   src: url("../fonts/din_alternate_bold-webfont.woff2") format("woff2"), url("../fonts/din_alternate_bold-webfont.woff") format("woff");
@@ -5390,7 +5390,7 @@ a.button.external:after,
   font-size: 13px;
   font-size: 0.8125rem; }
 
-.nswm .card { height: 266px; width: 400px; border: solid black 1px; float: left; }
-.nswm .card a { padding: 10px; color: black; }
+.nswm2018 .card { height: 266px; width: 400px; border: solid black 1px; float: left; }
+.nswm2018 .card a { padding: 10px; }
 
 /*# sourceMappingURL=styles.css.map */
