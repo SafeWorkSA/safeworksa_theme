@@ -1108,6 +1108,8 @@ footer {
       color: #d0e5f2;
       font-size: 14px;
       font-size: 0.875rem; }
+    .page-bottom-wrapper .region-bottom #block-block-13 a, .page-bottom-wrapper .region-bottom #block-block-13 a:hover {
+      color: #d0e5f2; }
 
 #block-bean-mailing-list-signup {
   margin-bottom: 60px; }
@@ -5390,7 +5392,6 @@ a.button.external:after,
   font-size: 13px;
   font-size: 0.8125rem; }
 
-.nswm2018 .card { height: 266px; width: 400px; border: solid black 1px; float: left; }
-.nswm2018 .card a { padding: 10px; }
+.nswm2018 .card { width:350px;height:266px;border:solid black 1px;float:left;margin:10px;padding:10% 10px;text-align:center;font-weight:bold; }
 
 /*# sourceMappingURL=styles.css.map */
