@@ -755,11 +755,10 @@ header.header {
     width: auto;
     position: absolute;
     float: none;
-    right: 55px;
+    right: 65px;
     max-width: 280px;
     top: 23px;
-    margin-right: 0;
-    right: 65px; }
+    margin-right: 0; }
     @media (min-width: 769px) {
       header.header .block-search {
         max-width: 385px; } }
@@ -788,7 +787,6 @@ header.header {
       border: 0;
       background: #8dc7eb;
       color: #fff;
-      line-height: 48px;
       padding: 0 20px;
       height: auto;
       float: none;
@@ -954,7 +952,6 @@ footer {
           background: transparent url(../images/icon-sm-bg.png) no-repeat 0 0;
           width: 32px;
           height: 55px;
-          display: block;
           display: block; }
           footer #block-block-14 .block__content ul > li > a:after {
             content: '';
@@ -3411,7 +3408,7 @@ div.panels-ipe-placeholder {
     width: 100%;
     height: 100%;
     text-align: center;
-    background: rgba(23, 126, 194, 0.9);
+    background: rgba(23, 126, 194, 0.75);
     color: #fff;
     text-decoration: none;
     padding: 0 20px;
@@ -3423,7 +3420,7 @@ div.panels-ipe-placeholder {
     font-size: 1.75rem;
     line-height: 1.3; }
     .front #main .pane-projects .view-id-projects .view-content .views-row .node .field-name-title a:hover {
-      background-color: rgba(23, 126, 194, 0.93); }
+      background-color: rgba(23, 126, 194, 0.8); }
 
 .messages {
   margin-bottom: 15px; }
@@ -5392,6 +5389,15 @@ a.button.external:after,
   font-size: 13px;
   font-size: 0.8125rem; }
 
-.nswm2018 .card { width:350px;height:266px;border:solid black 1px;float:left;margin:10px;padding:10% 10px;text-align:center;font-weight:bold; }
+/* NATIONAL SAFE WORK MONTH 2018 */
+.nswm2018 .header { position: relative;height: 120px; background: #ffd300; color: #000; background-image: url(https://www.safework.sa.gov.au/sites/g/files/net4331/f/nswm_web_header_long.png); background-position: center; background-size: cover; }
+.nswm2018 .header .tag { position: absolute; bottom: 0; width: 100%; text-align: center; font-weight: bold; }
+.nswm2018 .card { width: 350px; height: 266px; border: solid black 1px; float: left; margin: 10px; font-weight: bold; color: #fff; background: #000; position: relative; }
+.nswm2018 .card > .nswm2018 .card:nth-of-type(odd) { color: #000; background: #ffd300; }
+.nswm2018 .triangle { width: 0; height: 0; border-style: solid; border-width: 60px 60px 0 0; color: #000; border-color: #ffd300 transparent transparent transparent; }
+.nswm2018 .card > .nswm2018 .card:nth-of-type(odd) { color: #fff; border-color: #000; }
+.nswm2018 .title { position: absolute; left: 50px; font-size: 2em; line-height: 1.2em; }
+.nswm2018 .description { position: absolute; left: 50px; top: 170px; font-weight: normal; }
+.nswm2018 .card p > .nswm2018 .card p:nth-of-type(odd) { color: #000; }
 
 /*# sourceMappingURL=styles.css.map */
