@@ -5390,14 +5390,17 @@ a.button.external:after,
   font-size: 0.8125rem; }
 
 /* NATIONAL SAFE WORK MONTH 2018 */
-.nswm2018 .header { position: relative;height: 120px; background: #ffd300; color: #000; background-image: url(https://www.safework.sa.gov.au/sites/g/files/net4331/f/nswm_web_header_long.png); background-position: center; background-size: cover; }
-.nswm2018 .header .tag { position: absolute; bottom: 0; width: 100%; text-align: center; font-weight: bold; }
+.nswm2018 .brand { position: relative;height: 120px; background: #ffd300; color: #000; background-image: url(https://www.safework.sa.gov.au/sites/g/files/net4331/f/nswm_web_header_long.png); background-position: center; background-size: cover; }
+.nswm2018 .brand .tag { position: absolute; bottom: 0; width: 100%; text-align: center; font-weight: bold; }
 .nswm2018 .card { width: 350px; height: 266px; border: solid black 1px; float: left; margin: 10px; font-weight: bold; color: #fff; background: #000; position: relative; }
-.nswm2018 .card > .nswm2018 .card:nth-of-type(odd) { color: #000; background: #ffd300; }
+.nswm2018 .card:nth-of-type(odd) { background: #ffd300; }
+.nswm2018 .card a { color: #fff !important; }
+.nswm2018 .card a:nth-of-type(odd) { color: #000 !important; }
 .nswm2018 .triangle { width: 0; height: 0; border-style: solid; border-width: 60px 60px 0 0; color: #000; border-color: #ffd300 transparent transparent transparent; }
-.nswm2018 .card > .nswm2018 .card:nth-of-type(odd) { color: #fff; border-color: #000; }
-.nswm2018 .title { position: absolute; left: 50px; font-size: 2em; line-height: 1.2em; }
+.nswm2018 .triangle:nth-of-type(odd) { color: #fff; border-color: #000; }
+.nswm2018 .plus { position: absolute; top: 10px; left: 10px; }
+.nswm2018 .title { position: absolute; left: 50px; font-size: 2em; line-height: 1.2em !important; }
 .nswm2018 .description { position: absolute; left: 50px; top: 170px; font-weight: normal; }
-.nswm2018 .card p > .nswm2018 .card p:nth-of-type(odd) { color: #000; }
+.nswm2018 .card p a:nth-of-type(odd) { color: #000; }
 
 /*# sourceMappingURL=styles.css.map */
