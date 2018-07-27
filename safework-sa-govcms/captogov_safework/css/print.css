@@ -96,9 +96,9 @@
 	table.large-only {
 		display: table;
 	}
-	#content {
+	/*#content {
     	column-count: 2;
     	-webkit-column-count: 2;
     	-moz-column-count: 2;
-  }
+  	}*/
 }
