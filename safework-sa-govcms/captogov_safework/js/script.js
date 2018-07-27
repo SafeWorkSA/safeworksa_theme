@@ -434,16 +434,6 @@ function createRelatedContent() {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
@@ -845,15 +835,16 @@ if (window.matchMedia) {
 // IE, Firefox
 window.onbeforeprint = beforePrint;
 window.onafterprint = afterPrint;
-	
-    // Back to Top - by CodyHouse.co
+
+(function(){
+	// Back to Top - by CodyHouse.co
 	var backTop = document.getElementsByClassName('js-cd-top')[0],
-		// browser window scroll (in pixels) after which the "back to top" link is shown
-		offset = 300,
-		//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-		offsetOpacity = 1200,
-		scrollDuration = 700
-		scrolling = false;
+	//browser window scroll (in pixels) after which the "back to top" link is shown
+	offset = 300,
+	//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+	offsetOpacity = 1200,
+	scrollDuration = 700,
+	scrolling = false;
 	if( backTop ) {
 		//update back to top visibility on scrolling
 		window.addEventListener("scroll", function(event) {
@@ -920,4 +911,5 @@ window.onafterprint = afterPrint;
 	  	}
 	  	if (classList.length > 1) removeClass(el, classList.slice(1).join(' '));
 	}
+})();
 })(jQuery, Drupal, this, this.document);
