@@ -5,30 +5,23 @@
 	.show-on-print {
 		display: block;
 	}
-
 	img {
 		max-width: 500px;
 		height: auto; 	
 	}
-
 	html {
 		width: initial !important;
 	}
-
 	#page {
 		margin-top: 0;
 	}
-
 	body {
 		color: #000 !important;
 	}
-
 	body,h1, h2, h3, h4, h5, p, a, li {
 		font-family: sans-serif !important;
 		color: #000;
 	}
-
-
 	body .content-header,
 	body .banner-wrapper,
 	body .breadcrumb-wrapper,
@@ -40,23 +33,19 @@
 		margin: 0;
 		padding: 0;
 	}
-
 	body a {
 		color: #000 !important;
 
 	}
-
 	body a.external:after {
 		display: none;
 	}
-
 	.media-element-container > .field-name-field-file-image-title-text {
 		padding: 15px 0;
 		text-align: left;
 		color: #000;
 		font-style: italic;
 	}
-
 	body .messages-wrapper,
 	body .messages,
 	body .toc-filter,
@@ -80,22 +69,17 @@
 		font-size: 38px;
 		font-size: 2.375rem;
 	}
-
 	.tabs-nav {
 		display: none;
 	}
-
 	.tabs-container > .single-tab > .tab-title {
-
 		font-size: 20px;
 		/*padding-bottom: 20px;*/
 		display: block !important;
 	}
-
 	.tabs-container > .single-tab > .tab-content {
 		display: block !important;
 	}
-
 	details > summary {
 		background: transparent;
 		padding: 0;
@@ -103,10 +87,18 @@
 		font-size: 20px;
 		font-weight: bold;
 	}
-
 	details > .accordion-content {
 		display: block !important;
 	}
-
-
+	table.small-only {
+		display: none;
+	}
+	table.large-only {
+		display: table;
+	}
+	#content {
+    	column-count: 2;
+    	-webkit-column-count: 2;
+    	-moz-column-count: 2;
+  }
 }
