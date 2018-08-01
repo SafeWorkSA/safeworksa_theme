@@ -708,7 +708,7 @@ header.header {
         width: 175px;
         height: 26px;
         background-size: 175px 26px; }
-        @media (min-width: 1365px) {
+        @media (min-width: 1920px) {
           header.header .header-logo h1.site-name > a {
             width: 261px;
             height: 39px;
