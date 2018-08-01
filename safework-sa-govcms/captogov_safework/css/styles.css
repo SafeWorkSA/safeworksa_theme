@@ -676,9 +676,9 @@ header.header {
   @media (min-width: 1801px) {
     header.header .header__inner { padding: 0 60px; } }
   header.header .header__region { margin-left: 200px; float: none; }
-  header.header .header-logo { float: left; width: 270px; margin-top: 0px; }
+  header.header .header-logo { float: left; /*width: 270px;*/ margin-top: 0px; }
   @media (min-width: 1121px) {
-    header.header .header-logo { margin-top: 30px; padding-bottom: 22px; width: 200px; }
+    header.header .header-logo { margin-top: 30px; padding-bottom: 22px; }
 	header.header #block-superfish-1 { padding-top: 35px; } 
 	.panel-homepage-banner .view-homepage-banner .views-field-field-slide-image .field-content { top: -10px; } }
   header.header .header-logo h1.site-name { background: transparent; margin: 0; padding: 0; display: block !important; }
