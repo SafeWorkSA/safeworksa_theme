@@ -668,97 +668,57 @@ header.header {
           header.header #block-superfish-1 li.sf-depth-1 > ul > li .sf-depth-3 > ol,
           header.header #block-superfish-1 li.sf-depth-1 > ol > li .sf-depth-3 > ol {
             display: none; }
-  header.header .header-secondary-menu {
-    border-bottom: 1px solid #eeeeee;
-    -webkit-transition: 0.3s height;
-    -o-transition: 0.3s height;
-    transition: 0.3s height;
-    height: 43px; }
-    body.hide-secondary-nav header.header .header-secondary-menu {
-      height: 0;
-      overflow: hidden; }
-  header.header .header__inner {
-    padding: 30px 30px; }
-    @media (min-width: 1121px) {
-      header.header .header__inner {
-        padding: 0 20px; } }
-    @media (min-width: 1801px) {
-      header.header .header__inner {
-        padding: 0 60px; } }
-  header.header .header__region {
-    margin-left: 200px;
-    float: none; }
-  header.header .header-logo {
-    float: left;
-    width: 270px;
-    margin-top: 0px; }
-    @media (min-width: 1121px) {
-      header.header .header-logo {
-        margin-top: 30px;
-        padding-bottom: 22px; } }
-    header.header .header-logo h1.site-name {
-      background: transparent;
-      margin: 0;
-      padding: 0;
-      display: block !important; }
-      header.header .header-logo h1.site-name > a {
-        display: block;
-        text-indent: -9001px;
-        background: transparent url(../images/logo.svg) no-repeat 0 0;
-        width: 175px;
-        height: 26px;
-        background-size: 175px 26px; }
-        @media (min-width: 1920px) {
-          header.header .header-logo h1.site-name > a {
-            width: 261px;
-            height: 39px;
-            background-size: 261px 39px; } }
-  header.header #block-block-4 {
-    display: none;
-    position: absolute;
-    top: 15px;
-    right: 20px; }
-    @media (max-width: 1365px) {
-      header.header #block-block-4 {
-        display: block; } }
-    header.header #block-block-4 .mobile-menu-button {
+  header.header .header-secondary-menu { border-bottom: 1px solid #eeeeee; -webkit-transition: 0.3s height; -o-transition: 0.3s height; transition: 0.3s height; height: 43px; }
+  body.hide-secondary-nav header.header .header-secondary-menu { height: 0; overflow: hidden; }
+  header.header .header__inner { padding: 30px 30px; }
+  @media (min-width: 1121px) {
+    header.header .header__inner { padding: 0 20px; } }
+  @media (min-width: 1801px) {
+    header.header .header__inner { padding: 0 60px; } }
+  header.header .header__region { margin-left: 200px; float: none; }
+  header.header .header-logo { float: left; width: 270px; margin-top: 0px; }
+  @media (min-width: 1121px) {
+    header.header .header-logo { margin-top: 30px; padding-bottom: 22px; width: 200px; }
+	header.header #block-superfish-1 { padding-top: 35px; } 
+	.panel-homepage-banner .view-homepage-banner .views-field-field-slide-image .field-content { top: -10px; } }
+  header.header .header-logo h1.site-name { background: transparent; margin: 0; padding: 0; display: block !important; }
+  header.header .header-logo h1.site-name > a { display: block; text-indent: -9001px; background: transparent url(../images/logo.svg) no-repeat 0 0; width: 175px; height: 26px; background-size: 175px 26px; }
+  @media (min-width: 1920px) {
+    header.header .header-logo h1.site-name > a { width: 261px; height: 39px; background-size: 261px 39px; } }
+  header.header #block-block-4 { display: none; position: absolute; top: 15px; right: 20px; }
+  @media (max-width: 1365px) { header.header #block-block-4 { display: block; } }
+    header.header #block-block-4 .mobile-menu-button { display: block; padding: 15px 0 15px 0; }
+    header.header #block-block-4 .mobile-menu-button span {
+      font-size: 0px;
+      background-color: #004b85;
       display: block;
-      padding: 15px 0 15px 0; }
-      header.header #block-block-4 .mobile-menu-button span {
-        font-size: 0px;
-        background-color: #004b85;
-        display: block;
-        height: 6px;
-        width: 50px;
-        border-radius: 15px;
-        position: relative;
-        -webkit-transition: all 1s ease;
-        -o-transition: all 1s ease;
-        transition: all 1s ease; }
-        header.header #block-block-4 .mobile-menu-button span:before, header.header #block-block-4 .mobile-menu-button span:after {
-          content: "";
-          display: block;
-          height: 6px;
-          width: 50px;
-          border-radius: 15px;
-          background-color: #004b85;
-          -webkit-transition: all 0.6s ease;
-          -o-transition: all 0.6s ease;
-          transition: all 0.6s ease; }
-        header.header #block-block-4 .mobile-menu-button span:before {
-          position: absolute;
-          top: -15px; }
-        header.header #block-block-4 .mobile-menu-button span:after {
-          position: absolute;
-          top: 15px; }
-  header.header .block-search {
-    width: auto;
-    position: absolute;
-    float: none;
-    right: 65px;
-    max-width: 280px;
-    top: 23px;
-    margin-right: 0; }
+      height: 6px;
+      width: 50px;
+      border-radius: 15px;
+      position: relative;
+      -webkit-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease; }
+    header.header #block-block-4 .mobile-menu-button span:before, header.header #block-block-4 .mobile-menu-button span:after {
+      content: "";
+      display: block;
+      height: 6px;
+      width: 50px;
+      border-radius: 15px;
+      background-color: #004b85;
+      -webkit-transition: all 0.6s ease;
+      -o-transition: all 0.6s ease;
+      transition: all 0.6s ease; }
+    header.header #block-block-4 .mobile-menu-button span:before { position: absolute; top: -15px; }
+    header.header #block-block-4 .mobile-menu-button span:after { position: absolute; top: 15px; }
+    header.header .block-search {
+      width: auto;
+      position: absolute;
+      float: none;
+      right: 65px;
+      max-width: 280px;
+      top: 23px;
+      margin-right: 0; }
     @media (min-width: 769px) {
       header.header .block-search {
         max-width: 385px; } }
