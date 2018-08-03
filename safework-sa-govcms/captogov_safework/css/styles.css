@@ -5362,7 +5362,8 @@ a.button.external:after,
 .nswm2018 .title { position: absolute; left: 20px; right: 20px; font-size: 2em; line-height: 1.2em !important; }
 .nswm2018 .description { position: absolute; left: 20px; right: 20px; top: 160px; font-weight: normal; font-size: 1em; }
 .nswm2018 .card:nth-of-type(odd) p a { color: #000; }
-.nswm2018 .event { float: left; border: solid black 1px; margin: 10px; width: 330px; padding: 5px; }
+.nswm2018 .events { display: flex; flex-direction: row; }
+.nswm2018 .event { flex: 1; border: solid black 1px; margin: 10px; width: 330px; padding: 5px; }
 .nswm2018 .event span { padding: 5px; }
 .nswm2018 .event span:nth-of-type(1) {  } /* Date */
 .nswm2018 .event span:nth-of-type(2) {  } /* Time */
