@@ -267,9 +267,9 @@ hr {
 blockquote {
   color: #143f88;
   font-weight: bold;
-  background-color: #F8F7F7;
+  background-color: #FFFFFF;
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.7em;
   padding: 45px;
   padding-top: 100px;
   margin: 0;
@@ -284,7 +284,7 @@ blockquote {
     height: 60px;
     background: no-repeat center url("../images/quote.svg");
     position: absolute;
-    left: 50%;
+    left: 10%;
     top: 20px;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -3407,7 +3407,8 @@ div.panels-ipe-placeholder {
     margin-bottom: 20px; }
     .not-front #content .field.field-name-field-summary p {
       font-size: 18px;
-      font-size: 1.125rem; }
+      font-size: 1.3rem;
+      color: #154c91; }
   .not-front #content .tabs-primary {
     margin-top: 0px; }
 
@@ -4984,32 +4985,12 @@ div.video-filter {
   .view-id-resources.view-display-id-page table tr td a {
     text-decoration: none; }
 
-table tr th,
-table.views-table tr th {
-  background: #0066b3;
-  border: 0;
-  color: #fff;
-  padding: 15px 20px; }
-
-table tbody tr,
-table.views-table tbody tr {
-  border: 0;
-  background: #fff;
-  padding: 0; }
-  table tbody tr td,
-  table.views-table tbody tr td {
-    padding: 15px 20px;
-    font-size: 16px;
-    border: 0; }
-    table tbody tr td a,
-    table.views-table tbody tr td a {
-      color: #4c5e9d; }
-  table tbody tr:nth-child(odd) td,
-  table.views-table tbody tr:nth-child(odd) td {
-    background: #fff; }
-  table tbody tr:nth-child(even) td,
-  table.views-table tbody tr:nth-child(even) td {
-    background: #f8f8f8; }
+  table tr th, table.views-table tr th { background: #0066b3; border: 0; color: #fff; padding: 15px 20px; }
+  table tbody tr, table.views-table tbody tr { border: 0; background: #fff; padding: 0; }
+  table tbody tr td, table.views-table tbody tr td { padding: 15px 20px; font-size: 16px; /*border: 0;*/ }
+  table tbody tr td a, table.views-table tbody tr td a { color: #4c5e9d; }
+  table tbody tr:nth-child(odd) td, table.views-table tbody tr:nth-child(odd) td { background: #fff; }
+  table tbody tr:nth-child(even) td, table.views-table tbody tr:nth-child(even) td { background: #f8f8f8; }
 
 .views-exposed-form .views-exposed-widget .form-submit {
   margin-top: 32px;
