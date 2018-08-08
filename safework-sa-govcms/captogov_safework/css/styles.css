@@ -271,7 +271,7 @@ blockquote {
   text-align: center;
   font-size: 1.7em;
   padding: 45px;
-  padding-top: 100px;
+  /*padding-top: 100px;*/
   margin: 0;
   position: relative;
   line-height: 30px;
@@ -279,13 +279,13 @@ blockquote {
   margin-bottom: 40px; }
   blockquote:before {
     content: "";
-    display: block;
-    width: 60px;
+    /*display: block;*/
+    width: 100%; /*60px;*/
     height: 60px;
-    background: no-repeat center url("../images/quote.svg");
+    background: no-repeat left top url("../images/quote1.svg"), no-repeat right bottom url("../images/quote2.svg");
     position: absolute;
-    left: 10%;
-    top: 20px;
+    /*left: 10%;*/
+    /*top: 20px;*/
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); }
@@ -680,7 +680,7 @@ header.header {
   @media (min-width: 1121px) {
     header.header .header-logo { margin-top: 30px; padding-bottom: 22px; }
 	header.header #block-superfish-1 { padding-top: 35px; } 
-	.panel-homepage-banner .view-homepage-banner .views-field-field-slide-image .field-content { top: -10px; } }
+	.panel-homepage-banner .view-homepage-banner .views-field-field-slide-image .field-content { top: -50px; } }
   header.header .header-logo h1.site-name { background: transparent; margin: 0; padding: 0; display: block !important; }
   header.header .header-logo h1.site-name > a { display: block; text-indent: -9001px; background: transparent url(../images/logo.svg) no-repeat 0 0; width: 175px; height: 26px; background-size: 175px 26px; }
   @media (min-width: 1920px) {
@@ -3063,7 +3063,7 @@ body.page-search #content form {
   padding-bottom: 60px; }
   @media (min-width: 769px) {
     .panel-text-above-search .pane-content {
-      padding-top: 200px;
+      padding-top: 100px;
       padding-bottom: 0; } }
   .panel-text-above-search .pane-content h2 {
     margin: 0 0 20px;
@@ -3137,7 +3137,7 @@ div.panels-ipe-placeholder {
   border: 0; }
 
 #main .pane-quicklinks {
-  padding: 50px 40px; }
+  padding: 80px 40px; }
   @media (min-width: 769px) {
     #main .pane-quicklinks {
       padding: 100px 40px; } }
