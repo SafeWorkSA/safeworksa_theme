@@ -836,6 +836,7 @@ if (window.matchMedia) {
 window.onbeforeprint = beforePrint;
 window.onafterprint = afterPrint;
 
+jQuery(document).ready(function($){
 // Back to Top - by CodyHouse.co
 var backTop = document.getElementsByClassName('js-cd-top')[0],
 //browser window scroll (in pixels) after which the "back to top" link is shown
@@ -909,4 +910,5 @@ function removeClass(el, className) {
   	}
   	if (classList.length > 1) removeClass(el, classList.slice(1).join(' '));
 }
+});
 })(jQuery, Drupal, this, this.document);
