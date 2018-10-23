@@ -75,10 +75,10 @@
 
 
 function captogovadmin_safework_form_alter( &$form, &$form_state, $form_id ){
-	if($form_id == "page_node_form" && $form['type']['#value'] == "page") {
-		$form['scheduler_settings']['unpublish_on']['#title'] = "Set review date";
-		$form['scheduler_settings']['unpublish_on']['#description'] = "Leave blank for no review schedule";
-	}
+	// if($form_id == "page_node_form" && $form['type']['#value'] == "page") {
+	// 	$form['scheduler_settings']['unpublish_on']['#title'] = "Set review date";
+	// 	$form['scheduler_settings']['unpublish_on']['#description'] = "Leave blank for no review schedule";
+	// }
 	if($form_id == "event_node_form" && $form['type']['#value'] == "event") {
 		$form['actions']['submit']['#value'] = t('Submit');
 	}
